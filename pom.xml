@@ -67,6 +67,13 @@
 		</dependency>
 	</dependencies>
 
+	<scm>
+		<connection>scm:git:git://github.com/fiji/VIB</connection>
+		<developerConnection>scm:git:git@github.com:fiji/VIB</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/fiji/VIB</url>
+	</scm>
+
 	<repositories>
 		<!-- NB: for project parent, in case of partial checkout -->
 		<repository>
