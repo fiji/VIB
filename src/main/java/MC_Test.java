@@ -61,9 +61,12 @@ public class MC_Test implements PlugIn {
 		int threshold = 120;
 		BranchGroup scene = univ.getScene();
 		for(int i = scene.numChildren()-1; i >= 1 ; i--) {
-			scene.removeChild(i);
+			if (scene.getChild(i) instanceof BranchGroup)
+				if (scene.getChild(i).getCapability(BranchGroup.ALLOW_DETACH))
+					scene.removeChild(i);
 		}
-		
+		System.out.println("Nr. of contents:" + univ.getContents().size());
+		univ.removeAllContents();
 		createCase(caseNo);
 		Volume volume = new Volume(image);
 		List l = MCCube.getTriangles(volume, threshold);
