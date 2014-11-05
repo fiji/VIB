@@ -1,19 +1,18 @@
-import amira.AmiraTable;
 import amira.AmiraParameters;
-
-import ij.util.Tools;
-import ij.gui.GenericDialog;
-import ij.text.TextPanel;
-import ij.WindowManager;
+import amira.AmiraTable;
 import ij.ImagePlus;
 import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.measure.Calibration;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
-import ij.measure.Calibration;
-import java.util.Hashtable;
-import java.util.List;
+import ij.text.TextPanel;
+import ij.util.Tools;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Show_Label_Centers implements PlugInFilter {
 

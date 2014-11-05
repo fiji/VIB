@@ -1,5 +1,6 @@
 /* -*- mode: java; c-basic-offset: 8; indent-tabs-mode: t; tab-width: 8 -*- */
 
+import amira.AmiraMeshDecoder;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.io.FileInfo;
@@ -7,11 +8,7 @@ import ij.io.OpenDialog;
 import ij.plugin.PlugIn;
 import ij.text.TextWindow;
 
-import java.awt.*;
 import java.io.File;
-
-import amira.AmiraMeshDecoder;
-import amira.AmiraTable;
 
 public class AmiraMeshReader_ extends ImagePlus implements PlugIn {
 

@@ -2,12 +2,12 @@
 
 package features;
 
-import ij.ImageStack;
-import ij.ImagePlus;
-import ij.process.FloatProcessor;
-import ij.measure.Calibration;
 import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.measure.Calibration;
 import ij.plugin.PlugIn;
+import ij.process.FloatProcessor;
 
 /* At the suggestion of Ting Zhao, this class is for trying out
    image filters based on the coefficients of the characteristic

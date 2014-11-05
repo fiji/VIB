@@ -10,11 +10,11 @@ import ij.gui.GenericDialog;
 import ij.gui.ImageCanvas;
 import ij.plugin.PlugIn;
 import ij.process.FloatProcessor;
-import java.awt.Font;
+
 import java.awt.Dialog;
+import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.image.ColorModel;
-import vib.TransformedImage;
 import java.util.Arrays;
 
 /* TODOs:

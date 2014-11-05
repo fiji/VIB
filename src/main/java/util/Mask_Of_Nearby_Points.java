@@ -34,7 +34,6 @@ import ij.gui.GenericDialog;
 import ij.measure.Calibration;
 import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
-import ij.process.FloatProcessor;
 
 public class Mask_Of_Nearby_Points implements PlugIn {
 	

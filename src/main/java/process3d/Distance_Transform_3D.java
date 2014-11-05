@@ -1,9 +1,8 @@
 package process3d;
 
 import ij.ImagePlus;
-import ij.IJ;
-import ij.process.ImageProcessor;
 import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 // TODO take calibration into account
 

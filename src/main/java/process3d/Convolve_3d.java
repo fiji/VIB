@@ -3,12 +3,9 @@
 package process3d;
 
 import fiji.util.gui.GenericDialogPlus;
-
 import ij.IJ;
 import ij.ImagePlus;
-
 import ij.plugin.filter.PlugInFilter;
-
 import ij.process.ImageProcessor;
 
 public class Convolve_3d extends Convolve3d implements PlugInFilter {

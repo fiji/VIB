@@ -10,7 +10,6 @@
 
 package util;
 
-import amira.AmiraMeshEncoder;
 import amira.AmiraParameters;
 import ij.IJ;
 import ij.ImagePlus;
@@ -18,7 +17,9 @@ import ij.ImageStack;
 import ij.Macro;
 import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
+
 import java.io.File;
+
 import marchingcubes.ExportMesh_;
 
 public class Meshes_From_Label_File implements PlugIn {

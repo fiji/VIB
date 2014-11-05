@@ -2,11 +2,9 @@
 
 package util;
 
-import ij.*;
-import ij.process.*;
-import ij.plugin.*;
-import ij.io.*;
-import ij.measure.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.plugin.PlugIn;
 
 public class RGB_to_Luminance extends RGBToLuminance implements PlugIn {
 	public void run(String ignored) {

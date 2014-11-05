@@ -1,19 +1,18 @@
 package oldsegmenters;
 
-import ij.ImagePlus;
 import ij.IJ;
+import ij.ImagePlus;
 import ij.gui.Roi;
 import ij.plugin.PlugIn;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.awt.geom.GeneralPath;
-import java.awt.geom.AffineTransform;
-import java.awt.*;
 
-import math3d.*;
+import math3d.Line;
+import math3d.Plane;
+import math3d.Point3d;
 
 /**
  * Generates label data for unlabelled slices based on the data in the nearest slices

@@ -1,26 +1,25 @@
-import java.awt.*;
-import java.awt.event.*;
-
-import java.util.Vector;
-import java.io.File;
-
 import ij.IJ;
-import ij.macro.Interpreter;
-import ij.ImagePlus;
 import ij.Macro;
 import ij.gui.GenericDialog;
-import ij.plugin.PlugIn;
-import ij.io.OpenDialog;
-import ij.io.SaveDialog;
 import ij.io.DirectoryChooser;
+import ij.io.OpenDialog;
+import ij.macro.Interpreter;
+import ij.plugin.PlugIn;
 
-import vib.app.gui.ProgressIndicator;
-import vib.app.gui.Console;
-import vib.app.gui.FileGroupDialog;
-import vib.app.FileGroup;
+import java.awt.Button;
+import java.awt.Choice;
+import java.awt.GridBagConstraints;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
 import vib.app.Options;
-import vib.app.module.Module;
+import vib.app.gui.FileGroupDialog;
+import vib.app.gui.ProgressIndicator;
 import vib.app.module.EndModule;
+import vib.app.module.Module;
 import vib.app.module.State;
 
 public class VIB_Protocol implements PlugIn, ActionListener {

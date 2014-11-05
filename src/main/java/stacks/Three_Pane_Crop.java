@@ -26,10 +26,10 @@
 
 package stacks;
 
-import ij.*;
-import ij.gui.ImageCanvas;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
 import ij.plugin.PlugIn;
-import ij.process.ByteProcessor;
 
 public class Three_Pane_Crop implements PlugIn {
 

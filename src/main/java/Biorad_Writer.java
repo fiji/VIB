@@ -1,8 +1,17 @@
-import java.io.*;
-import ij.*;
-import ij.io.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.io.FileInfo;
+import ij.io.ImageWriter;
+import ij.io.SaveDialog;
+import ij.measure.Calibration;  //for Calibration
 import ij.plugin.PlugIn;
-import ij.measure.*;  //for Calibration
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
 // Class to save an image as a Biorad PIC file
 // (c) Greg Jefferis <jefferis@gmail.com> 2006-8

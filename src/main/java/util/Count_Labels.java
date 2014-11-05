@@ -8,13 +8,13 @@
 
 package util;
 
-import amira.AmiraMeshEncoder;
 import amira.AmiraParameters;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
 import ij.Macro;
 import ij.plugin.PlugIn;
+
 import java.io.File;
 
 public class Count_Labels implements PlugIn {

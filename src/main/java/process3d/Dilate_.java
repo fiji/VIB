@@ -1,17 +1,14 @@
 package process3d;
 
-import java.awt.image.ColorModel;
-
-import ij.plugin.filter.PlugInFilter;
-
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
 import ij.gui.GenericDialog;
-
+import ij.plugin.filter.PlugInFilter;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
 
-import ij.ImagePlus;
-import ij.ImageStack;
-import ij.IJ;
+import java.awt.image.ColorModel;
 
 /**
  * This class implements the dilation filter.

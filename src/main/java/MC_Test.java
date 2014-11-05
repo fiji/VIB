@@ -1,23 +1,32 @@
-import javax.vecmath.*;
-import javax.media.j3d.*;
 import com.sun.j3d.utils.geometry.Sphere;
 
-import ij.process.ByteProcessor;
 import ij.ImagePlus;
 import ij.ImageStack;
-import ij.plugin.PlugIn;
 import ij.gui.GenericDialog;
-
+import ij.plugin.PlugIn;
+import ij.process.ByteProcessor;
 import ij3d.Image3DUniverse;
 import ij3d.Volume;
-import marchingcubes.MCCube;
-
-import java.util.List;
 
 import java.awt.Color;
 import java.awt.Scrollbar;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
+import java.util.List;
+
+import javax.media.j3d.Appearance;
+import javax.media.j3d.BranchGroup;
+import javax.media.j3d.ColoringAttributes;
+import javax.media.j3d.PolygonAttributes;
+import javax.media.j3d.QuadArray;
+import javax.media.j3d.Shape3D;
+import javax.media.j3d.Transform3D;
+import javax.media.j3d.TransformGroup;
+import javax.vecmath.Color3f;
+import javax.vecmath.Point3f;
+import javax.vecmath.Vector3f;
+
+import marchingcubes.MCCube;
 
 
 public class MC_Test implements PlugIn {

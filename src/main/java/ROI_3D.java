@@ -4,7 +4,7 @@ import ij.gui.ImageCanvas;
 import ij.gui.Roi;
 import ij.gui.StackWindow;
 import ij.plugin.PlugIn;
-import java.awt.Scrollbar;
+
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 

@@ -3,10 +3,8 @@
  * there's a top-level PlugIn as originally.
  */
 
-import ij.IJ;
+import features.ComputeCurvatures;
 import ij.plugin.PlugIn;
-
-import features.*;
 
 public class Compute_Curvatures implements PlugIn
 {

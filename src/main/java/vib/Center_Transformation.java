@@ -2,18 +2,16 @@ package vib;
 
 import amira.AmiraParameters;
 import amira.AmiraTable;
-
-import ij.util.Tools;
-import ij.gui.GenericDialog;
-import ij.text.TextPanel;
 import ij.WindowManager;
-import ij.ImagePlus;
+import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
-import ij.process.ImageProcessor;
-import math3d.Point3d;
-import java.util.Hashtable;
-import java.util.List;
+import ij.text.TextPanel;
+import ij.util.Tools;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import math3d.Point3d;
 
 public class Center_Transformation implements PlugIn {
 	

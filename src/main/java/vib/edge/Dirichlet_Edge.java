@@ -1,15 +1,14 @@
 package vib.edge;
 
-import ij.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.GenericDialog;
 import ij.measure.Calibration;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 import inference.LogFuncs;
-
-import java.awt.Polygon;
-
 import vib.InterpolatedImage;
 import vib.MaxEntHistogram;
 import vib.VIB;

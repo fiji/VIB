@@ -4,8 +4,8 @@ import ij.gui.GenericDialog;
 import ij.gui.PolygonRoi;
 import ij.gui.Roi;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.ImageProcessor;
 import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
 
 /*
 

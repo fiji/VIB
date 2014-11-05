@@ -27,31 +27,36 @@
 
 package util;
 
-import ij.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
 import ij.gui.GenericDialog;
 import ij.gui.YesNoCancelDialog;
-import ij.process.*;
-import ij.plugin.*;
-import ij.io.*;
-import java.awt.event.ItemEvent;
-import java.io.File;
-import java.util.Random;
-import vib.app.FileGroup;
-import vib.app.gui.FileGroupDialog;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Panel;
+import ij.io.DirectoryChooser;
+import ij.io.FileSaver;
+import ij.io.OpenDialog;
+import ij.plugin.PlugIn;
+import ij.process.ByteProcessor;
+import ij.process.ShortProcessor;
+
 import java.awt.Button;
-import java.awt.TextField;
-import java.awt.Label;
 import java.awt.Checkbox;
-import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.image.ColorModel;
-import java.util.regex.Pattern;
-import java.util.ArrayList;
+import java.io.File;
 import java.util.HashMap;
+import java.util.Random;
+
+import vib.app.FileGroup;
+import vib.app.gui.FileGroupDialog;
 
 public class Quantile_Based_Normalization implements PlugIn, ActionListener, ItemListener {
 

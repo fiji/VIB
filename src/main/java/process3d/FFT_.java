@@ -3,10 +3,10 @@ package process3d;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
 import ij.process.StackConverter;
-import ij.process.FloatProcessor;
-import ij.plugin.filter.PlugInFilter;
 
 public class FFT_ implements PlugInFilter {
 	

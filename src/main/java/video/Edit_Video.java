@@ -2,45 +2,39 @@ package video;
 
 import ij.IJ;
 import ij.ImagePlus;
-import ij.plugin.PlugIn;
 import ij.gui.GenericDialog;
+import ij.gui.Line;
+import ij.gui.PolygonRoi;
 import ij.gui.Roi;
 import ij.gui.ShapeRoi;
-import ij.gui.PolygonRoi;
-import ij.gui.Line;
-import ij.process.ImageProcessor;
-import ij.process.ColorProcessor;
+import ij.plugin.PlugIn;
 import ij.process.Blitter;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
 
-import java.io.File;
-import java.io.*;
-
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.awt.Rectangle;
-import java.awt.Polygon;
-import java.awt.Panel;
-import java.awt.Label;
-import java.awt.Dimension;
-import java.awt.Insets;
-import java.awt.Shape;
-import java.awt.GridLayout;
-import javax.swing.BoxLayout;
-import java.awt.FlowLayout;
 import java.awt.Button;
 import java.awt.Color;
-
-import java.awt.geom.GeneralPath;
-import java.awt.geom.FlatteningPathIterator;
-import java.awt.geom.PathIterator;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.Polygon;
+import java.awt.Rectangle;
+import java.awt.Shape;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.FlatteningPathIterator;
+import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.Area;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.BoxLayout;
 
 public class Edit_Video implements PlugIn, ActionListener {
 

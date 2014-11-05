@@ -2,22 +2,12 @@
 
 package util;
 
-import java.awt.image.ColorModel;
-import java.awt.image.IndexColorModel;
-import java.util.Enumeration;
-import java.util.Hashtable;
-
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
-import ij.process.ByteProcessor;
-import ij.process.FloatProcessor;
-import ij.measure.Calibration;
-
-import pal.math.ConjugateDirectionSearch;
 import pal.math.MultivariateFunction;
 import vib.TransformedImage;
 

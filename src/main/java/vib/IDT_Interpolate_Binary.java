@@ -2,9 +2,7 @@ package vib;
 
 import ij.ImagePlus;
 import ij.ImageStack;
-
 import ij.plugin.filter.PlugInFilter;
-
 import ij.process.ImageProcessor;
 
 /*

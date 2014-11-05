@@ -1,16 +1,20 @@
-import java.awt.BorderLayout;
-import java.awt.Panel;
-import java.awt.event.*;
-import java.awt.Dimension;
-
-import com.sun.j3d.utils.applet.MainFrame;
 import com.sun.j3d.utils.geometry.ColorCube;
-import com.sun.j3d.utils.universe.*;
-import javax.media.j3d.*;
-import javax.vecmath.*;
+import com.sun.j3d.utils.universe.SimpleUniverse;
 
-import ij.plugin.PlugIn;
 import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Panel;
+
+import javax.media.j3d.Alpha;
+import javax.media.j3d.BoundingSphere;
+import javax.media.j3d.BranchGroup;
+import javax.media.j3d.Canvas3D;
+import javax.media.j3d.RotationInterpolator;
+import javax.media.j3d.Transform3D;
+import javax.media.j3d.TransformGroup;
 
 
 public class Test_Java3D implements PlugIn {

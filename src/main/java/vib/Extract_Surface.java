@@ -1,28 +1,20 @@
 package vib;
 
+import fiji.util.DoubleArray;
+import fiji.util.IntArray;
 import ij.IJ;
 import ij.ImagePlus;
-
 import ij.gui.GenericDialog;
-
 import ij.measure.Calibration;
-
 import ij.plugin.filter.PlugInFilter;
-
 import ij.process.ImageProcessor;
-
 import ij3d.Image3DUniverse;
-
-import fiji.util.IntArray;
-import fiji.util.DoubleArray;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-
 import java.text.DecimalFormat;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

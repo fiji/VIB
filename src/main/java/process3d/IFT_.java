@@ -1,29 +1,26 @@
 package process3d;
 
-import vib.PointList;
-import vib.BenesNamedPoint;
-
-import java.util.Iterator;
-import java.util.List;
-import java.util.ArrayList;
-
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.io.PrintWriter;
-import java.io.FileWriter;
-
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
-import ij.process.ImageProcessor;
-import ij.process.ColorProcessor;
-import ij.process.ByteProcessor;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
-
+import ij.process.ByteProcessor;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
 import ij.text.TextWindow;
 
-import ij.gui.GenericDialog;
-import ij.WindowManager;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import vib.BenesNamedPoint;
+import vib.PointList;
 
 public class IFT_ implements PlugInFilter {
 	

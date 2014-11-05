@@ -2,11 +2,12 @@
 
 package features;
 
-import ij.*;
-import ij.measure.Calibration;
-import ij.plugin.*;
-import ij.process.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
 import ij.gui.GenericDialog;
+import ij.measure.Calibration;
+import ij.plugin.PlugIn;
 
 public class Tubeness_ implements PlugIn {
 

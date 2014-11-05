@@ -7,22 +7,23 @@ package marchingcubes;
  * MCTriangulator.  This is useful so you can import the triangulated
  * image into Blender, for example. */
 
-import ij.ImagePlus;
 import ij.IJ;
+import ij.ImagePlus;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
-import ij.io.SaveDialog;
 import ij.io.FileInfo;
-import ij.plugin.PlugIn;
+import ij.io.SaveDialog;
 import ij.measure.Calibration;
-import java.util.List;
+import ij.plugin.PlugIn;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.io.File;
-import java.io.PrintStream;
-import java.io.IOException;
-import ij3d.ColorTable;
+import java.util.List;
+
 import javax.vecmath.Point3f;
 import javax.vecmath.Vector3f;
 

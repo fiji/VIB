@@ -1,14 +1,13 @@
 /* -*- mode: java; c-basic-offset: 8; indent-tabs-mode: t; tab-width: 8 -*- */
 
-import ij.IJ;
-import ij.io.SaveDialog;
-import ij.gui.GenericDialog;
-import ij.plugin.PlugIn;
-import ij.text.TextWindow;
-import ij.WindowManager;
-
 import amira.AmiraParameters;
 import amira.AmiraTableEncoder;
+import ij.IJ;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.io.SaveDialog;
+import ij.plugin.PlugIn;
+import ij.text.TextWindow;
 
 public class AmiraTableWriter_ implements PlugIn {
 

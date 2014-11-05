@@ -1,8 +1,8 @@
 import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.GenericDialog;
-import ij.process.ImageProcessor;
 import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 public class Despeckle_ implements PlugInFilter{
 

@@ -2,33 +2,20 @@ package vib;
 
 import amira.AmiraParameters;
 import amira.AmiraTable;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
 
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.macro.Interpreter;
-import ij.plugin.*;
-import ij.io.SaveDialog;
-import ij.text.TextPanel;
-import ij.text.TextWindow;
-import ij.util.Tools;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.text.DecimalFormat;
-import java.util.Date;
-import java.util.regex.*;
-import java.util.Properties;
-import java.util.Hashtable;
-import java.util.Vector;
-import java.util.Enumeration;
-import java.awt.*;
+import java.awt.Choice;
+import java.awt.Frame;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
-import java.awt.image.*;
+import java.util.Vector;
 
 public class EditAmiraParameters_ implements PlugIn, ActionListener,
 	TextListener {

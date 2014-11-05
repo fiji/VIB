@@ -12,17 +12,18 @@ import ij.process.ColorProcessor;
 import ij.process.ImageConverter;
 import ij.process.ImageProcessor;
 import ij3d.Image3DUniverse;
+
 import java.awt.Polygon;
+import java.awt.color.ColorSpace;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
-import java.awt.image.WritableRaster;
-import java.awt.image.Raster;
 import java.awt.image.ComponentColorModel;
-import java.awt.color.ColorSpace;
 import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferByte;
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
 
 import javax.media.j3d.Appearance;
 import javax.media.j3d.BranchGroup;

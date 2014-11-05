@@ -1,12 +1,10 @@
 
 import ij.IJ;
+import ij.gui.OvalRoi;
 import ij.gui.Roi;
 import ij.gui.ShapeRoi;
-import ij.gui.OvalRoi;
 import ij.plugin.MacroInstaller;
 import ij.plugin.PlugIn;
-
-import java.awt.*;
 
 /**
  * User: Tom Larkworthy

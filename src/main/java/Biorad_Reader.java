@@ -1,12 +1,18 @@
-import ij.*;
-import ij.io.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.io.FileInfo;
+import ij.io.FileOpener;
+import ij.io.OpenDialog;
+import ij.measure.Calibration;
+import ij.plugin.PlugIn;
 import ij.util.Tools;
-import ij.plugin.*;
-import java.io.*;
-import java.util.zip.GZIPInputStream;
 
-import ij.measure.*;
-import java.awt.image.*;
+import java.awt.image.ColorModel;
+import java.awt.image.IndexColorModel;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.zip.GZIPInputStream;
 
 /** Imports a Z series(image stack) from a Biorad MRC 600
     confocal microscope.  The width, height and number of images are

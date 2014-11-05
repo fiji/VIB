@@ -1,16 +1,15 @@
 package vib;
 
 import amira.AmiraParameters;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
+import ij.gui.StackWindow;
+import ij.plugin.PlugIn;
 
-import ij.plugin.*;
-import ij.*;
-import ij.gui.*;
-import ij.process.*;
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import java.util.*;
+import java.util.Vector;
 
 /** This plugin is an example showing how to add a non-destructive 
   graphic overlay to an image or stack. */

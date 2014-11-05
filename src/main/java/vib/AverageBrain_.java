@@ -1,12 +1,9 @@
 package vib;
 
-import amira.AmiraParameters;
-
-import ij.*;
-import ij.gui.*;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-
+import ij.process.ImageProcessor;
 import vib.app.module.AverageBrain;
 
 public class AverageBrain_ implements PlugInFilter {

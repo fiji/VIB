@@ -1,18 +1,17 @@
 package oldsegmenters;
 
+import amira.AmiraParameters;
 import ij.IJ;
-import ij.process.ImageProcessor;
-import ij.gui.Roi;
-import ij.gui.ShapeRoi;
-import ij.gui.OvalRoi;
-import ij.plugin.MacroInstaller;
-import ij.plugin.PlugIn;
 import ij.ImagePlus;
 import ij.gui.ImageCanvas;
+import ij.gui.OvalRoi;
+import ij.gui.Roi;
+import ij.plugin.MacroInstaller;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
 
-import java.awt.*;
-
-import amira.AmiraParameters;
+import java.awt.Point;
+import java.awt.Rectangle;
 
 /**
  * User: Tom Larkworthy

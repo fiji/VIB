@@ -1,43 +1,50 @@
 package oldsegmenters;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowFocusListener;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.io.IOException;
-
-import javax.swing.*;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ChangeEvent;
-
+import amira.AmiraMeshEncoder;
+import amira.AmiraParameters;
+import amira.AmiraTableEncoder;
 import events.RoiEvent;
 import events.RoiListener;
-import events.RoiWatcher;
 import events.SliceEvent;
 import events.SliceListener;
 import events.SliceWatcher;
-import adt.Connectivity2D;
-import adt.Points;
-
-import amira.AmiraParameters;
-import amira.AmiraMeshEncoder;
-import amira.AmiraTableEncoder;
-import vib.SegmentationViewerCanvas;
-
 import gui.GuiBuilder;
-import ij.*;
-import ij.gui.*;
-import ij.plugin.PlugIn;
-import ij.plugin.MacroInstaller;
-import ij.text.TextWindow;
+import ij.IJ;
+import ij.ImageListener;
+import ij.ImagePlus;
+import ij.gui.ImageWindow;
+import ij.gui.StackWindow;
 import ij.io.SaveDialog;
+import ij.plugin.MacroInstaller;
+import ij.plugin.PlugIn;
+import ij.text.TextWindow;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
+import java.io.IOException;
+
+import javax.swing.BoxLayout;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
+import vib.SegmentationViewerCanvas;
 
 /*
  * Created on 29-May-2006

@@ -1,10 +1,10 @@
 import amira.AmiraParameters;
-
-import ij.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.process.*;
-import ij.plugin.filter.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.GenericDialog;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 /* This plugin takes a binned image as input. It then reassigns equally spaced
    gray values to the pixels. */

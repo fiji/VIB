@@ -1,10 +1,10 @@
 import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.GenericDialog;
+import ij.plugin.filter.PlugInFilter;
 import ij.process.ColorProcessor;
 import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
-import ij.plugin.filter.PlugInFilter;
 
 public class KD_Cartoon implements PlugInFilter {
 

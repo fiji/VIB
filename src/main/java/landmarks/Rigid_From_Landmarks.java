@@ -2,30 +2,11 @@
 
 package landmarks;
 
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.plugin.filter.*;
-
-import ij.measure.Calibration;
-
-import java.awt.Color;
-import java.io.*;
-
-import math3d.Point3d;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Comparator;
-
-import landmarks.NamedPointWorld;
-import vib.FastMatrix;
-import vib.TransformedImage;
-
-import vib.oldregistration.RegistrationAlgorithm;
-
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
 import util.Overlay_Registered;
 
 public class Rigid_From_Landmarks extends RigidFromLandmarks implements PlugIn {

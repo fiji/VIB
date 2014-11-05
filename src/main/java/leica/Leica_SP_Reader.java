@@ -1,12 +1,16 @@
 package leica;
 
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.io.FileInfo;
+import ij.io.OpenDialog;
 import ij.macro.Interpreter;
-import ij.*;
-import ij.io.*;
 import ij.measure.Calibration;
-import ij.plugin.*;
-import java.io.*;
-import java.util.*;
+import ij.plugin.PlugIn;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Opens multi-image 8-bits tiff files created by Leica confocal microscope

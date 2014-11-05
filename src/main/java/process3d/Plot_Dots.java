@@ -1,15 +1,14 @@
 package process3d;
 
-import java.awt.Font;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.MouseEvent;
-
-import java.text.DecimalFormat;
-
+import ij.ImagePlus;
+import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
-import ij.plugin.PlugIn;
-import ij.ImagePlus;
+
+import java.awt.Font;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.text.DecimalFormat;
 
 public class Plot_Dots implements PlugIn, MouseMotionListener {
 

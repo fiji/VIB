@@ -1,13 +1,9 @@
-import ij.plugin.filter.PlugInFilter;
+import ij.ImagePlus;
+import ij.ImageStack;
 import ij.gui.GenericDialog;
 import ij.measure.Calibration;
-import ij.ImageStack;
-import ij.IJ;
-import ij.ImagePlus;
-
+import ij.plugin.filter.PlugInFilter;
 import ij.process.Blitter;
-import ij.process.ColorProcessor;
-import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
 
 public class Reslice_Z implements PlugInFilter {

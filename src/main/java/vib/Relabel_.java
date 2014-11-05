@@ -1,16 +1,18 @@
 package vib;
 
 import amira.AmiraParameters;
-
-import ij.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.util.*;
-import java.lang.*;
+import ij.process.ImageProcessor;
+
+import java.awt.Button;
+import java.awt.Choice;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class Relabel_ implements PlugInFilter, ActionListener {
 	ImagePlus image;

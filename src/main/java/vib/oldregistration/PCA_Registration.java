@@ -2,30 +2,28 @@
 
 package vib.oldregistration;
 
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.plugin.filter.*;
-
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
+import ij.gui.Toolbar;
 import ij.measure.Calibration;
+import ij.plugin.PlugIn;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 import java.awt.Color;
-import java.io.*;
-
-import math3d.Point3d;
-import math3d.JacobiFloat;
-
-import java.util.ArrayList;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Comparator;
 
+import math3d.JacobiFloat;
 import vib.FastMatrix;
-
 import vib.transforms.FastMatrixTransform;
 import vib.transforms.OrderedTransformations;
 import vib.transforms.Threshold;
-
-import util.CombinationGenerator;
 
 /* ------------------------------------------------------------------------
 

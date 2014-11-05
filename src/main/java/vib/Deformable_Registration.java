@@ -1,15 +1,13 @@
 package vib;
 
-import ij.process.ImageProcessor;
-import ij.process.ByteProcessor;
-import ij.process.FloatProcessor;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
-import ij.plugin.PlugIn;
-
-import ij.gui.GenericDialog;
 import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
+import ij.process.ByteProcessor;
+import ij.process.FloatProcessor;
 
 /**
  * Weiguo Lu et al (2004), Fast free-form deformable registration via calculus

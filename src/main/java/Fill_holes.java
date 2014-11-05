@@ -6,10 +6,8 @@ import ij.gui.ShapeRoi;
 import ij.plugin.MacroInstaller;
 import ij.plugin.PlugIn;
 
-import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 /**
  * @author Benjamin Schmid

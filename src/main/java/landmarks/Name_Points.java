@@ -28,36 +28,19 @@
 
 package landmarks;
 
-import ij.*;
-import ij.process.*;
-import ij.io.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.plugin.filter.*;
-import ij.text.*;
+import client.ArchiveClient;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.Macro;
+import ij.WindowManager;
+import ij.io.OpenDialog;
+import ij.measure.Calibration;
+import ij.plugin.PlugIn;
 
 import java.applet.Applet;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.regex.*;
-import java.text.DecimalFormat;
-
-import client.ArchiveClient;
-import ij.measure.Calibration;
-import pal.math.MultivariateFunction;
-import stacks.ThreePaneCrop;
-import util.BatchOpener;
-import util.Penalty;
-import vib.FastMatrix;
-import vib.oldregistration.RegistrationAlgorithm;
-import util.Overlay_Registered;
 
 public class Name_Points extends NamePoints implements PlugIn {
 	public void run( String arguments ) {

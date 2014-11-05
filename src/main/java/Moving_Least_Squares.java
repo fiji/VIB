@@ -6,8 +6,8 @@ import ij.gui.PointRoi;
 import ij.gui.Roi;
 import ij.plugin.PlugIn;
 import ij.process.ColorProcessor;
-import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
+
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -23,42 +23,37 @@
 
 package stacks;
 
-import util.BatchOpener;
-
+import amira.AmiraParameters;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
-import ij.WindowManager;
-import ij.process.ImageProcessor;
-import ij.process.ByteProcessor;
-import ij.gui.ImageWindow;
-import ij.Macro;
 import ij.LookUpTable;
-import ij.plugin.PlugIn;
-import ij.plugin.Thresholder;
-import ij.plugin.filter.ThresholdToSelection;
+import ij.Macro;
+import ij.gui.PolygonRoi;
 import ij.gui.Roi;
 import ij.gui.ShapeRoi;
-import ij.gui.PolygonRoi;
+import ij.plugin.PlugIn;
+import ij.plugin.filter.ThresholdToSelection;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
 
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Polygon;
+import java.awt.geom.PathIterator;
+import java.awt.image.BufferedImage;
+import java.awt.image.IndexColorModel;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.awt.image.IndexColorModel;
-import java.awt.Image;
-import java.awt.Polygon;
-import java.awt.Shape;
-import java.awt.geom.PathIterator;
 import java.text.DecimalFormat;
-import javax.imageio.ImageIO;
-
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.ArrayList;
 
-import amira.AmiraParameters;
+import javax.imageio.ImageIO;
+
+import util.BatchOpener;
 
 public class Unpack_To_PNG implements PlugIn {
 

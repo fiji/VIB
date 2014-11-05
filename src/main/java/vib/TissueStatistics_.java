@@ -2,12 +2,10 @@ package vib;
 
 import amira.AmiraParameters;
 import amira.AmiraTable;
-
 import ij.IJ;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-
 import vib.app.module.TissueStatistics;
 import vib.app.module.TissueStatistics.Statistics;
 

@@ -9,10 +9,7 @@
 package vib;
 
 import amira.AmiraParameters;
-
-import ij.IJ;
 import ij.ImagePlus;
-import ij.ImageStack;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;

@@ -3,25 +3,18 @@
 package vib;
 
 import amira.AmiraParameters;
-
-import distance.*;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
-import ij.gui.YesNoCancelDialog;
 import ij.macro.Interpreter;
-import ij.measure.Calibration;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 import ij.text.TextWindow;
+
 import java.awt.Choice;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.StringTokenizer;
-import math3d.Point3d;
-import pal.math.*;
 
 public class RigidRegistration_ extends RigidRegistration
 		implements PlugInFilter {

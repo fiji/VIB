@@ -8,7 +8,9 @@ import ij.ImageStack;
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
+
 import java.io.File;
+
 import util.BatchOpener;
 import vib.app.FileGroup;
 import vib.app.gui.FileGroupDialog;

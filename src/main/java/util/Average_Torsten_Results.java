@@ -4,20 +4,17 @@ package util;
 
 import ij.IJ;
 import ij.ImagePlus;
-import ij.ImageStack;
-import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
-import ij.process.ByteProcessor;
+
 import java.io.File;
-import util.BatchOpener;
-import vib.app.FileGroup;
-import vib.Average_Images;
-import vib.app.gui.FileGroupDialog;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.lang.reflect.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import vib.Average_Images;
 
 /* An example plugin that averages the images found in the directories
    created by the registration algorithm of Torsten et al, which can be

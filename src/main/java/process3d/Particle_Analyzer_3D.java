@@ -1,24 +1,22 @@
 package process3d;
 
-import ij.text.TextWindow;
-import ij.gui.GenericDialog;
-import ij.WindowManager;
-
-import ij.ImageStack;
-import ij.ImagePlus;
 import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.ImageProcessor;
 import ij.process.ByteProcessor;
 import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
+import ij.text.TextWindow;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Particle_Analyzer_3D implements PlugInFilter {
 

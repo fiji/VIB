@@ -1,13 +1,10 @@
 import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
-
 import ij.gui.GenericDialog;
 import ij.gui.Line;
 import ij.gui.Roi;
-
 import ij.plugin.PlugIn;
-
 import ij.process.ByteProcessor;
 import ij.process.ColorProcessor;
 import ij.process.FloatProcessor;

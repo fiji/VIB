@@ -4,12 +4,11 @@ import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.gui.Roi;
 import ij.gui.ShapeRoi;
+import ij.plugin.filter.PlugInFilter;
 import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
-import ij.plugin.filter.PlugInFilter;
 
 import java.awt.geom.GeneralPath;
-
 import java.util.ArrayList;
 
 public class Visual_Grep implements PlugInFilter {

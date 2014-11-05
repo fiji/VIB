@@ -1,18 +1,16 @@
 import delaunay.DelaunayTriangulation;
 import delaunay.Pnt;
 import delaunay.Simplex;
-
 import ij.IJ;
 import ij.ImagePlus;
+import ij.gui.GenericDialog;
 import ij.gui.ImageCanvas;
 import ij.gui.ImageWindow;
-import ij.gui.GenericDialog;
 import ij.gui.PointRoi;
 import ij.gui.PolygonRoi;
 import ij.gui.Roi;
 import ij.gui.ShapeRoi;
 import ij.gui.StackWindow;
-import ij.gui.Toolbar;
 import ij.macro.Interpreter;
 import ij.measure.Calibration;
 import ij.measure.ResultsTable;
@@ -21,7 +19,6 @@ import ij.plugin.filter.Analyzer;
 import ij.process.ImageProcessor;
 
 import java.awt.Color;
-import java.awt.geom.GeneralPath;
 import java.awt.Graphics;
 import java.awt.Polygon;
 import java.awt.Rectangle;
@@ -29,7 +26,7 @@ import java.awt.Shape;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
+import java.awt.geom.GeneralPath;
 import java.util.Iterator;
 import java.util.TreeMap;
 

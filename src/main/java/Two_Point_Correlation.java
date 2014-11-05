@@ -8,11 +8,13 @@
  *
  * Implementation by J. Schindelin, all rights reserved.
  */
-import ij.*;
-import ij.gui.*;
-import ij.plugin.*;
-import ij.process.*;
-import ij.plugin.filter.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
+import ij.gui.PlotWindow;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 
 public class Two_Point_Correlation implements PlugInFilter {
 	ImagePlus image;

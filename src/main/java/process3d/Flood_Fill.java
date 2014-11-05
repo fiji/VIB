@@ -2,17 +2,14 @@ package process3d;
 
 import ij.IJ;
 import ij.ImagePlus;
-
 import ij.gui.Toolbar;
-
+import ij.plugin.MacroInstaller;
+import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
-import ij.process.ShortProcessor;
 import ij.process.ColorProcessor;
 import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
-
-import ij.plugin.MacroInstaller;
-import ij.plugin.PlugIn;
+import ij.process.ShortProcessor;
 
 public class Flood_Fill implements PlugIn {
 	

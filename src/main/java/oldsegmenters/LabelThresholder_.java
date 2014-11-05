@@ -1,13 +1,13 @@
 package oldsegmenters;
 
-import ij.gui.Roi;
-import ij.process.ImageProcessor;
-import ij.plugin.PlugIn;
-import ij.plugin.filter.PlugInFilter;
-import ij.ImagePlus;
 import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.Roi;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
-import java.awt.*;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.util.HashMap;
 
 /**

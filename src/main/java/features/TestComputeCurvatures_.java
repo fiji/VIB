@@ -4,10 +4,13 @@
 
 package features;
 
-import ij.*;
-import ij.plugin.*;
-import ij.process.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
 import ij.measure.Calibration;
+import ij.plugin.PlugIn;
+import ij.process.FloatProcessor;
 
 /* For testing the hessianEigenvaluesAtPoint() method, essentially,
  * and experimenting with measures based on those eigenvalues. */

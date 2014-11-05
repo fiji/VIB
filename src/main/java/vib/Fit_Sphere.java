@@ -13,6 +13,7 @@ import ij.gui.StackWindow;
 import ij.measure.Calibration;
 import ij.plugin.PlugIn;
 import ij.process.ByteProcessor;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.io.BufferedReader;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.regex.Pattern;
+
 import pal.math.ConjugateDirectionSearch;
 import pal.math.MultivariateFunction;
 import util.BatchOpener;

@@ -1,12 +1,15 @@
 package vib;
 
 import amira.AmiraParameters;
-
-import ij.*;
-import ij.gui.*;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-import java.util.*;
+import ij.process.ImageProcessor;
+
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
 import math3d.Point3d;
 
 public class ElasticTransform_ implements PlugInFilter {

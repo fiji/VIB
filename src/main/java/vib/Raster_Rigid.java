@@ -1,17 +1,17 @@
 package vib;
 
-import process3d.*;
-import amira.*;
-import distance.Euclidean;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
-import ij.measure.Calibration;
 import ij.plugin.PlugIn;
+
 import java.util.Vector;
-import java.awt.Choice;
+
 import math3d.Point3d;
+import process3d.Gradient_;
+import process3d.Rebin_;
+import process3d.Smooth_;
 
 public class Raster_Rigid implements PlugIn {
 

@@ -2,9 +2,9 @@
 
 package stacks;
 
+import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
-import ij.IJ;
 import ij.plugin.PlugIn;
 
 public class ThreePaneContainer_ implements PlugIn {

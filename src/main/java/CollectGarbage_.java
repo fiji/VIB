@@ -1,6 +1,5 @@
 import ij.ImageListener;
 import ij.ImagePlus;
-
 import ij.plugin.PlugIn;
 
 public class CollectGarbage_ implements PlugIn {

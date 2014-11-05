@@ -4,14 +4,11 @@
  * Use this plugin to read PsychoMorph .tem files
  */
 
-import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.PointRoi;
-import ij.io.FileInfo;
 import ij.io.OpenDialog;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-import ij.text.TextWindow;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,11 +1,14 @@
-import vib.segment.*;
-import ij.WindowManager;
-import ij.ImagePlus;
+import amira.AmiraParameters;
 import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
 import ij.gui.ImageWindow;
-import amira.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import vib.segment.CustomStackWindow;
+import vib.segment.MaterialList;
 
 public class Segmentation_Editor extends vib.segment.SegmentationEditor {
 

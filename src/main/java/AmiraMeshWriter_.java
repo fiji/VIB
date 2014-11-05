@@ -1,19 +1,13 @@
+import amira.AmiraMeshEncoder;
+import amira.AmiraParameters;
+import amira.AmiraTableEncoder;
 import ij.IJ;
 import ij.ImagePlus;
-import ij.Menus;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.io.SaveDialog;
 import ij.plugin.PlugIn;
 import ij.text.TextWindow;
-
-import java.awt.Menu;
-import java.awt.MenuBar;
-import java.util.Vector;
-
-import amira.AmiraMeshEncoder;
-import amira.AmiraParameters;
-import amira.AmiraTableEncoder;
 
 public class AmiraMeshWriter_ implements PlugIn {
 

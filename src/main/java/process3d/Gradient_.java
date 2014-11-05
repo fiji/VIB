@@ -1,17 +1,9 @@
 package process3d;
 
-import ij.measure.Calibration;
-
-import ij.plugin.filter.PlugInFilter;
-
-import ij.gui.GenericDialog;
-
-import ij.process.FloatProcessor;
-import ij.process.ImageProcessor;
-
 import ij.ImagePlus;
-import ij.ImageStack;
-import ij.IJ;
+import ij.gui.GenericDialog;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 public class Gradient_ extends Gradient implements PlugInFilter {
 

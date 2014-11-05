@@ -2,7 +2,7 @@ import ij.IJ;
 import ij.ImageJ;
 import ij.Menus;
 import ij.gui.GenericDialog;
-import ij.plugin.PlugIn;
+
 import java.awt.Font;
 import java.awt.Menu;
 import java.awt.MenuBar;

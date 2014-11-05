@@ -1,26 +1,17 @@
 package vib;
 
-import ij.plugin.filter.ThresholdToSelection;
-import ij.plugin.filter.PlugInFilter;
-import ij.ImagePlus;
-import ij.ImageStack;
 import ij.IJ;
-import ij.gui.PointRoi;
-import ij.gui.ShapeRoi;
-import ij.gui.Roi;
+import ij.ImagePlus;
 import ij.gui.GenericDialog;
+import ij.gui.Roi;
+import ij.plugin.filter.PlugInFilter;
+import ij.plugin.filter.ThresholdToSelection;
 import ij.process.ImageProcessor;
-import ij.process.ByteProcessor;
-import ij.process.Blitter;
 
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.AdjustmentEvent;
-import java.awt.event.AdjustmentListener;
 import java.awt.Rectangle;
 import java.awt.Scrollbar;
-import java.awt.image.ColorModel;
-import java.awt.image.IndexColorModel;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 
 public class Local_Threshold implements PlugInFilter {
 

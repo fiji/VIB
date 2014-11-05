@@ -1,15 +1,11 @@
 package process3d;
 
 import ij.IJ;
-import ij.ImageStack;
 import ij.ImagePlus;
-import ij.process.StackConverter;
-import ij.process.ImageProcessor;
-import ij.process.ByteProcessor;
 import ij.plugin.filter.PlugInFilter;
-import ij.measure.Calibration;
-
-import vib.*;
+import ij.process.ImageProcessor;
+import ij.process.StackConverter;
+import vib.InterpolatedImage;
 
 public class Harris_Corner_Detector implements PlugInFilter {
 

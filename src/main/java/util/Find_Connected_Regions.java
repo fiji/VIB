@@ -35,30 +35,8 @@ package util;
 
 import ij.IJ;
 import ij.ImagePlus;
-import ij.ImageStack;
 import ij.gui.GenericDialog;
-import ij.gui.Roi;
-import ij.gui.PointRoi;
 import ij.plugin.PlugIn;
-import ij.process.ImageProcessor;
-import ij.process.ByteProcessor;
-import ij.process.ShortProcessor;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.ArrayList;
-import amira.AmiraParameters;
-import ij.measure.Calibration;
-import ij.process.FloatProcessor;
-import ij.plugin.ImageCalculator;
-import java.awt.image.ColorModel;
-import ij.measure.ResultsTable;
-import java.awt.Dialog;
-import java.awt.Button;
-import java.awt.Polygon;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.IndexColorModel;
 
 public class Find_Connected_Regions implements PlugIn {
 

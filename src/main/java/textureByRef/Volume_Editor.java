@@ -1,8 +1,5 @@
 package textureByRef;
 
-import voltex.VoltexGroup;
-import voltex.VoltexVolume;
-
 import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.NewImage;
@@ -10,6 +7,8 @@ import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 import ij3d.Content;
 import ij3d.Image3DUniverse;
+import voltex.VoltexGroup;
+import voltex.VoltexVolume;
 
 public class Volume_Editor implements PlugInFilter {
 	

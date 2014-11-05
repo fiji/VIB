@@ -2,32 +2,13 @@
 
 package features;
 
-import ij.ImageJ;
 import ij.IJ;
-import ij.ImagePlus;
-import ij.ImageStack;
-import ij.measure.Calibration;
-import ij.process.ImageProcessor;
-import ij.process.FloatProcessor;
-import ij.process.ByteProcessor;
-import ij.plugin.PlugIn;
 import ij.gui.Roi;
-import ij.gui.StackWindow;
-import ij.gui.ImageCanvas;
-import ij.gui.ImageWindow;
+import ij.measure.Calibration;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
 
-import stacks.ThreePaneCrop;
-import ij.plugin.filter.Duplicater;
-
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Polygon;
-import java.awt.Image;
-import java.awt.Scrollbar;
-import java.awt.Label;
-import java.awt.event.*;
-
-import util.Limits;
 
 public class Sigma_Palette extends SigmaPalette implements PlugIn {
 

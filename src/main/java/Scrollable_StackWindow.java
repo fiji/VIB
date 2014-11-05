@@ -4,8 +4,8 @@ import ij.gui.ImageCanvas;
 import ij.gui.StackWindow;
 import ij.plugin.PlugIn;
 
-import java.awt.event.MouseWheelListener;
 import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 public class Scrollable_StackWindow implements PlugIn {
 	public void run(String arg) {
