@@ -15,6 +15,25 @@
 	<name>plugins/VIB_.jar</name>
 	<description />
 
+	<scm>
+		<connection>scm:git:git://github.com/fiji/VIB</connection>
+		<developerConnection>scm:git:git@github.com:fiji/VIB</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/fiji/VIB</url>
+	</scm>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://jenkins.imagej.net/job/VIB/</url>
+	</ciManagement>
+
+	<repositories>
+		<!-- NB: for project parent -->
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<!-- Fiji dependencies -->
 		<dependency>
@@ -56,25 +75,5 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/job/VIB/</url>
-	</ciManagement>
-
-	<scm>
-		<connection>scm:git:git://github.com/fiji/VIB</connection>
-		<developerConnection>scm:git:git@github.com:fiji/VIB</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/fiji/VIB</url>
-	</scm>
-
-	<repositories>
-		<!-- NB: for project parent -->
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
 
 </project>
