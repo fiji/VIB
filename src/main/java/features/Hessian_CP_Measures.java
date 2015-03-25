@@ -16,10 +16,12 @@ import ij.process.FloatProcessor;
 
 public class Hessian_CP_Measures implements PlugIn, GaussianGenerationCallback {
 	
+	@Override
 	public void proportionDone(double d) {
 		IJ.showProgress(d);
 	}
 
+	@Override
 	public void run(String ignore) {
 
 		ImagePlus original = IJ.getImage();

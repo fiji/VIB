@@ -8,6 +8,7 @@ import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
 public class Scrollable_StackWindow implements PlugIn {
+	@Override
 	public void run(String arg) {
 		ImagePlus image = IJ.getImage();
 		image.setWindow(new Window(image, image.getCanvas()));
@@ -22,6 +23,7 @@ public class Scrollable_StackWindow implements PlugIn {
 		/* For some funny reason, we get each event twice */
 		boolean skip;
 
+		@Override
 		public void mouseWheelMoved(MouseWheelEvent event) {
 			synchronized(this) {
 				skip = !skip;

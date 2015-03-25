@@ -33,11 +33,13 @@ public class Particle_Analyzer_3D implements PlugInFilter {
 
 	public Particle_Analyzer_3D() {}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Particle Analyzer 3D");
 		gd.addNumericField("Threshold [0..255]", threshold, 0);
@@ -134,6 +136,7 @@ public class Particle_Analyzer_3D implements PlugInFilter {
 			this.cl = cl; this.size = size; this.inten = inten;
 		}
 
+		@Override
 		public int compareTo(Object o) {
 			// sort descending
 			return ((Cl)o).size - this.size;

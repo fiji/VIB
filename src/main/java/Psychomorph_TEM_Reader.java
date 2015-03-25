@@ -20,11 +20,13 @@ import java.io.PrintStream;
 public class Psychomorph_TEM_Reader implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public int setup(String arg, ImagePlus ip) {
 		image = ip;
 		return DOES_ALL | NO_CHANGES;
 	}
 
+	@Override
 	public void run(ImageProcessor imp) {
 		OpenDialog od = new OpenDialog("TEM File", null);
 		String dir = od.getDirectory();

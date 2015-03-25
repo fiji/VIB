@@ -73,6 +73,7 @@ public class Edit_Video implements PlugIn, ActionListener {
 		return stack;
 	}
 
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("Video editing");
 		Panel all = new Panel();
@@ -165,6 +166,7 @@ public class Edit_Video implements PlugIn, ActionListener {
 			return;
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("Open"))
 			open();
@@ -743,14 +745,17 @@ public class Edit_Video implements PlugIn, ActionListener {
 
 		final Color BC = new Color(139, 142, 255);
 
+		@Override
 		public Insets getInsets() {
 			return new Insets(10, 10, 10, 10);
 		}
 
+		@Override
 		public void update(Graphics g) {
 			paint(g);
 		}
 
+		@Override
 		public void paint(Graphics g) {
 			super.paint(g);
 			if(getWidth() == 0 || getHeight() == 0)

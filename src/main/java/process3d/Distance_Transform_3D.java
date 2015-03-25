@@ -9,10 +9,12 @@ import ij.process.ImageProcessor;
 public class Distance_Transform_3D extends DistanceTransform3D
 		implements PlugInFilter {
 
+	@Override
 	public void run(ImageProcessor ip) {
 		getTransformed(image, 255).show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G;

@@ -12,6 +12,7 @@ import java.io.File;
 
 public class AmiraMeshReader_ extends ImagePlus implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		boolean showIt = (IJ.getInstance() != null && arg.equals(""));
 		String dir="";

@@ -68,6 +68,7 @@ class FluorescenceOptimizer implements MultivariateFunction {
 		this.valuesInImages = valuesInImages;
 	}
 
+	@Override
 	public double evaluate(double argument[]) {
 		float total = 0;
 		for( int i = 0; i < n; ++i ) {
@@ -83,14 +84,17 @@ class FluorescenceOptimizer implements MultivariateFunction {
 		// FIXME
 	}
 
+	@Override
 	public int getNumArguments() {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
+	@Override
 	public double getLowerBound(int n) {
 		return lowerFluorescenceBound;
 	}
 
+	@Override
 	public double getUpperBound(int n) {
 		return upperFluorescenceBound;
 	}
@@ -106,6 +110,7 @@ class FluorescenceOptimizer implements MultivariateFunction {
 }
 public class Exposure_Blend_Two_Stacks implements PlugIn {
 
+	@Override
 	public void run(String arg0) {
 
 		/* Make sure image 0 is d and image 1 is b... */

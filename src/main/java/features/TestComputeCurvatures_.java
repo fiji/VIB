@@ -19,6 +19,7 @@ public class TestComputeCurvatures_ implements PlugIn, GaussianGenerationCallbac
 
     ImagePlus imp;
 
+    @Override
     public void run( String ignored ) {
 
         imp = WindowManager.getCurrentImage();
@@ -141,6 +142,7 @@ public class TestComputeCurvatures_ implements PlugIn, GaussianGenerationCallbac
 
     }
 
+    @Override
     public void proportionDone( double d ) {
         IJ.showProgress( d );
     }

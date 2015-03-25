@@ -9,11 +9,13 @@ public class Gradient_ extends Gradient implements PlugInFilter {
 
 	private ImagePlus image;
 
+	@Override
 	public int setup(String arg, ImagePlus image) {
 		this.image = image;
 		return DOES_8G | DOES_16;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Gradient_");
 		gd.addCheckbox("Use calibration", true);

@@ -22,10 +22,12 @@ public class LabelThresholder_ implements PlugInFilter{
     public static int max = 100;
 
 
+    @Override
     public int setup(String arg, ImagePlus imp) {
         return DOES_8G;
     }
 
+    @Override
     public void run(ImageProcessor ip) {
         SegmentatorModel model = new SegmentatorModel(IJ.getImage());
 

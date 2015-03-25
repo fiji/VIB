@@ -9,6 +9,7 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 
 public class ROI_3D implements PlugIn {
+	@Override
 	public void run(String arg) {
 		ImagePlus image = IJ.getImage();
 		ImageCanvas canvas = image.getCanvas();
@@ -31,6 +32,7 @@ public class ROI_3D implements PlugIn {
 				oldSlice = currentSlice;
 			}
 
+			@Override
 			public void adjustmentValueChanged(AdjustmentEvent e) {
 				rois[oldSlice] = imp.getRoi();
 				oldSlice = e.getValue();

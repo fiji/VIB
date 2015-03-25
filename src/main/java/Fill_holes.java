@@ -29,6 +29,7 @@ public class Fill_holes implements PlugIn {
         "}\n" +
         "\n";
 	
+	@Override
 	public void run(String arg) {
 		MacroInstaller installer = new MacroInstaller();
         installer.install(MACRO_CMD);
@@ -252,6 +253,7 @@ public class Fill_holes implements PlugIn {
 			return s;
 		}
 	
+		@Override
 		public String toString(){
 			return "[" + roi.getBoundingRect().width + "; " 
 			+ roi.getBoundingRect().height + "] (" + level + ")";

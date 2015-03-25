@@ -20,6 +20,7 @@ public class Show_centers implements PlugInFilter {
 	
 	private ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Center Transformation");
 		AmiraParameters.addAmiraTableList(gd, "Statistics");
@@ -35,6 +36,7 @@ public class Show_centers implements PlugInFilter {
 		centers.updateAndDraw();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus img) {
 		this.image = img;
 		return DOES_8G;

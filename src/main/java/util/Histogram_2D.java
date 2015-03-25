@@ -775,6 +775,7 @@ public class Histogram_2D implements PlugIn {
 	public final static int LOG_PROBABILITIES = 1;
 	public final static int SELF_INFORMATION = 2;
 
+	@Override
 	public void run(String ignored) {
 
 		String titleSubstring = "";

@@ -34,6 +34,7 @@ public class Plot_Dots implements PlugIn, MouseMotionListener {
 	private ImagePlus imp;
 
 
+	@Override
 	public void run(String arg) {
 	}
 
@@ -57,6 +58,7 @@ public class Plot_Dots implements PlugIn, MouseMotionListener {
 		imp.getCanvas().addMouseMotionListener(this);
 	}
 
+	@Override
 	public void mouseMoved(MouseEvent e) {
 		double x = (e.getX() - INDENT) / factor  + xmin;
 		double y = (h + INDENT - e.getY()) / factor  + ymin;
@@ -78,6 +80,7 @@ public class Plot_Dots implements PlugIn, MouseMotionListener {
 		return index;
 	}
 
+	@Override
 	public void mouseDragged(MouseEvent e) {}
 	public void mouseEntered(MouseEvent e) {}
 	public void mouxeExited(MouseEvent e) {}

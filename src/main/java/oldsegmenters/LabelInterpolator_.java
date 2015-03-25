@@ -34,6 +34,7 @@ import math3d.Point3d;
  */
 public class LabelInterpolator_ implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		interpolate(new SegmentatorModel(IJ.getImage()));
 	}
@@ -123,6 +124,7 @@ public class LabelInterpolator_ implements PlugIn {
 			return results;
 		}
 
+		@Override
 		public String toString() {
 			return "labelledSlices: " + labelledSlices;
 		}

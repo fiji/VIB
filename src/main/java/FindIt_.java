@@ -25,6 +25,7 @@ public class FindIt_ implements PlugInFilter {
 	int[] pixels;
 	boolean debug;
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.imp = imp;
 
@@ -159,6 +160,7 @@ public class FindIt_ implements PlugInFilter {
 		stack.addSlice("", new ij.process.ColorProcessor(width,height,p3));
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		ip=ip.convertToRGB();
 		width=ip.getWidth();

@@ -19,6 +19,7 @@ import ij.plugin.PlugIn;
  * add stop button
  */
 public class BatchLog_ implements PlugIn {
+	@Override
 	public void run(String message) {
 		if (message.equals(""))
 			message = Macro.getOptions();

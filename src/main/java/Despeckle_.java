@@ -21,6 +21,7 @@ public class Despeckle_ implements PlugInFilter{
 	private int FG = 0;
 	private int BG = 255;
 	
+	@Override
 	public void run(ImageProcessor ip){
 		w = image.getWidth();
 		h = image.getHeight();
@@ -93,6 +94,7 @@ public class Despeckle_ implements PlugInFilter{
 			? currentSlide[y*w + x] : (byte)BG;
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus img){
 		this.image = img;
 		return DOES_8G;

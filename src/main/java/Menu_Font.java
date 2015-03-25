@@ -8,6 +8,7 @@ import java.awt.Menu;
 import java.awt.MenuBar;
 
 public class Menu_Font implements ij.plugin.PlugIn {
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("New Menu Font Size");
 		gd.addNumericField("menuFontSize", 16, 0);

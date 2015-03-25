@@ -41,6 +41,7 @@ public class Delaunay_Voronoi implements PlugIn {
 
 	final boolean drawZoom = IJ.getVersion().compareTo("1.37n") >= 0;
 
+	@Override
 	public void run(String arg) {
 		ImagePlus imp = IJ.getImage();
 		if (imp == null)
@@ -190,6 +191,7 @@ public class Delaunay_Voronoi implements PlugIn {
 			}
 		}
 
+		@Override
 		public int compareTo(Object other) {
 			PntPair o = (PntPair)other;
 			int result = compare(a, o.a);
@@ -285,6 +287,7 @@ public class Delaunay_Voronoi implements PlugIn {
 			addKeyListener(this);
 		}
 
+		@Override
 		public void paint(Graphics g) {
 			super.paint(g);
 			drawOverlay(g);
@@ -366,19 +369,23 @@ public class Delaunay_Voronoi implements PlugIn {
 				Pnt.circumcenter((Pnt[])b.toArray(new Pnt[0])));
 		}
 
+		@Override
 		public void mouseReleased(MouseEvent e) {
 			super.mouseReleased(e);
 			initDelaunay();
 			repaint();
 		}
 
+		@Override
 		public void keyTyped(KeyEvent e) {}
+		@Override
 		public void keyPressed(KeyEvent e) {
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 				mode = mode == DELAUNAY ? VORONOI : DELAUNAY;
 				repaint();
 			}
 		}
+		@Override
 		public void keyReleased(KeyEvent e) {}
 
 		public void initDelaunay() {

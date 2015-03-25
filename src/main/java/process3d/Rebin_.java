@@ -12,6 +12,7 @@ import ij.process.ImageProcessor;
 public class Rebin_ extends Rebin implements PlugInFilter {
 	private ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Rebin_");
 		gd.addNumericField("min", 0.0f, 3);
@@ -27,6 +28,7 @@ public class Rebin_ extends Rebin implements PlugInFilter {
 				(int)(gd.getNextNumber())).show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus img) {
 		this.image = img;
 		return DOES_32;

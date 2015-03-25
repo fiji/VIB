@@ -17,6 +17,7 @@ public class Center_Transformation implements PlugIn {
 	
 	public Center_Transformation(){}
 
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("Center Transformation");
 		AmiraParameters.addAmiraTableList(gd, "Model table");

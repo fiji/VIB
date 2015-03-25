@@ -30,6 +30,7 @@ public class Implicit_Interpolate_Binary implements PlugInFilter {
 	public ImplicitSamples[] samples;
 	public ImplicitFunction implicitFunction;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		ImageStack stack = image.getStack();
 		int sliceCount = stack.getSize();
@@ -290,6 +291,7 @@ public class Implicit_Interpolate_Binary implements PlugInFilter {
 		}
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;

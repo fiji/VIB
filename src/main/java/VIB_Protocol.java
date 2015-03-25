@@ -37,6 +37,7 @@ public class VIB_Protocol implements PlugIn, ActionListener {
 	private FileGroupDialog fgd;
 	private File template;
 	
+	@Override
 	public void run(String arg) {
 		options = new Options();
 		String option;
@@ -62,6 +63,7 @@ public class VIB_Protocol implements PlugIn, ActionListener {
 		gd.addStringField("Configuration file", "", 25);
 		final TextField confTF = (TextField)gd.getStringFields().get(0);
 		button.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				OpenDialog d = new OpenDialog("Load", "");
 				if (d.getFileName() == null)
@@ -195,6 +197,7 @@ public class VIB_Protocol implements PlugIn, ActionListener {
 		((TextField)gd.getStringFields().get(i)).setText(st);
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == templateButton) {
 			File selected = fgd.getSelected();

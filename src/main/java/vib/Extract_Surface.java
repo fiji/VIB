@@ -35,6 +35,7 @@ public class Extract_Surface implements PlugInFilter {
 	InterpolatedImage ii;
 	Calibration calib;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		calib = image.getCalibration();
 		GenericDialog gd = new GenericDialog("Transform Parameters");
@@ -84,6 +85,7 @@ public class Extract_Surface implements PlugInFilter {
 			saveAsText(fileName);
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C | NO_CHANGES;
@@ -113,12 +115,14 @@ public class Extract_Surface implements PlugInFilter {
 			return i | (j << 11) | (k << 22);
 		}
 
+		@Override
 		public boolean equals(Object o) {
 			SurfaceVoxel other = (SurfaceVoxel)o;
 			return i == other.i && j == other.j && k == other.k;
 		}
 
 		// lexicographic order
+		@Override
 		public int compareTo(Object o) {
 			SurfaceVoxel other = (SurfaceVoxel)o;
 			int diff = i - other.i;
@@ -130,6 +134,7 @@ public class Extract_Surface implements PlugInFilter {
 			return diff;
 		}
 
+		@Override
 		public String toString() {
 			return "" + i + " " + j + " " + k;
 		}
@@ -171,13 +176,16 @@ public class Extract_Surface implements PlugInFilter {
 				iter = neighbours.iterator();
 			}
 
+			@Override
 			public boolean hasNext() {
 				return iter.hasNext();
 			}
 
+			@Override
 			public Object next() {
 				return iter.next();
 			}
+			@Override
 			public void remove() {
 				throw new UnsupportedOperationException();
 			}
@@ -482,11 +490,13 @@ public class Extract_Surface implements PlugInFilter {
 			}
 		}
 
+		@Override
 		public boolean equals(Object o) {
 			Edge e = (Edge)o;
 			return a == e.a && b == e.b;
 		}
 
+		@Override
 		public int compareTo(Object o) {
 			Edge e = (Edge)o;
 			int diff = a - e.a;
@@ -495,6 +505,7 @@ public class Extract_Surface implements PlugInFilter {
 			return diff;
 		}
 
+		@Override
 		public String toString() {
 			return "" + a + " " + b;
 		}
@@ -565,11 +576,13 @@ public class Extract_Surface implements PlugInFilter {
 			this.a = a; this.b = b; this.c = c;
 		}
 
+		@Override
 		public boolean equals(Object other) {
 			Triangle o = (Triangle)other;
 			return a == o.a && b == o.b && c == o.c;
 		}
 
+		@Override
 		public int compareTo(Object other) {
 			Triangle o = (Triangle)other;
 			int diff = a - o.a;
@@ -581,6 +594,7 @@ public class Extract_Surface implements PlugInFilter {
 			return diff;
 		}
 
+		@Override
 		public String toString() {
 			return "" + a + " " + b + " " + c;
 		}

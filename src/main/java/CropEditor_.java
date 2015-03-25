@@ -18,6 +18,7 @@ public class CropEditor_ implements PlugInFilter {
 		return b[index] & 0xff;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		stack=image.getStack();
 		if(stack==null)
@@ -98,6 +99,7 @@ public class CropEditor_ implements PlugInFilter {
 			r.show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		// TODO: handle 16-bit and 32-bit

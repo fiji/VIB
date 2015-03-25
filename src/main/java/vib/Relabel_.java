@@ -20,6 +20,7 @@ public class Relabel_ implements PlugInFilter, ActionListener {
 	GenericDialog gd;
 	String[] materialList;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		if (!AmiraParameters.isAmiraLabelfield(image)) {
 			IJ.error("No labelfield!");
@@ -77,6 +78,7 @@ public class Relabel_ implements PlugInFilter, ActionListener {
 		return -1;
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent event) {
 		// switch sides
 		Vector v = gd.getChoices();
@@ -89,6 +91,7 @@ public class Relabel_ implements PlugInFilter, ActionListener {
 		}
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8C | DOES_8G;

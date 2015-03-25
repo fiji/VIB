@@ -39,6 +39,7 @@ public class IFT_ implements PlugInFilter {
 
 	public IFT_() {}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		int[] wIDs = WindowManager.getIDList();
 		if(wIDs == null){
@@ -290,6 +291,7 @@ System.out.println("Propagate");
 			(int)(data[z2][i2] & 0xff));
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus image) {
 		this.image = image;
 		return DOES_8G;
@@ -386,6 +388,7 @@ System.out.println("Propagate");
 			return cls;
 		}
 
+		@Override
 		public String toString() {
 			return min + " " + max + " " + mean + " "
 				 + vol + " " + cogx + " " + cogy + " " + cogz

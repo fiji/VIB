@@ -40,6 +40,7 @@ import vib.app.FileGroup;
  */
 public class Fit_Sphere implements PlugIn {
 
+	@Override
 	public void run(String ignored) {
 
 		String averagedNC82Path = "/Users/mark/central-complex-complete-vib-protocol/output_1/71yAAeastmost.tif";
@@ -641,6 +642,7 @@ public class Fit_Sphere implements PlugIn {
 			}
 		}
 
+		@Override
 		public double evaluate(double[] argument) {
 
 			double variancesSummed = 0;
@@ -681,10 +683,12 @@ public class Fit_Sphere implements PlugIn {
 			return variancesSummed;
 		}
 
+		@Override
 		public int getNumArguments() {
 			return 3;
 		}
 
+		@Override
 		public double getLowerBound(int n) {
 
 			// FIXME: for argument n, what's the lower bound?
@@ -693,6 +697,7 @@ public class Fit_Sphere implements PlugIn {
 			return 0;
 		}
 
+		@Override
 		public double getUpperBound(int n) {
 
 			// FIXME: ditto above

@@ -11,6 +11,7 @@ import ij.text.TextWindow;
 
 public class AmiraMeshWriter_ implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("Choose Window");
 		int c = AmiraParameters.addWindowList(gd, "window", false);

@@ -15,6 +15,7 @@ import math3d.Point3d;
 public class ElasticTransform_ implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Transform Parameters");
 		AmiraParameters.addAmiraMeshList(gd, "imageToTransform");
@@ -46,6 +47,7 @@ public class ElasticTransform_ implements PlugInFilter {
 		return res;
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;

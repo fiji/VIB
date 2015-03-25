@@ -20,11 +20,13 @@ public class Show_Label_Centers implements PlugInFilter {
 	
 	public Show_Label_Centers(){}
 
+	@Override
 	public int setup(String arg, ImagePlus img) {
 		this.image = img;
 		return DOES_8G | DOES_8C;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Show Label Centers");
 		AmiraParameters.addAmiraTableList(gd, "Statistics file");

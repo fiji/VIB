@@ -20,6 +20,7 @@ import vib.BilateralFilter;
 public class Bilateral_Filter implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Bilateral Parameters");
 		gd.addNumericField("spatial radius", 3, 0);
@@ -33,6 +34,7 @@ public class Bilateral_Filter implements PlugInFilter {
 			image, spatialRadius, rangeRadius).show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;

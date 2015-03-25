@@ -10,11 +10,13 @@ public class KD_Cartoon implements PlugInFilter {
 
 	private ImagePlus image;
 
+	@Override
 	public int setup(String arg, ImagePlus img){
 		this.image = img;
 		return DOES_ALL | NO_CHANGES;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Despeckle");
 		gd.addNumericField("ratio color/space",
@@ -86,11 +88,13 @@ public class KD_Cartoon implements PlugInFilter {
 
 		double r2, g2, b2;
 
+		@Override
 		public void init() {
 			r2 = g2 = b2 = 0;
 			super.init();
 		}
 
+		@Override
 		public void add(int x, int y) {
 			int c = ip.get(x, y);
 			decompose(c);
@@ -100,6 +104,7 @@ public class KD_Cartoon implements PlugInFilter {
 			super.add(x, y);
 		}
 
+		@Override
 		public void finish() {
 			if (count < 1)
 				return;
@@ -109,6 +114,7 @@ public class KD_Cartoon implements PlugInFilter {
 			super.finish();
 		}
 
+		@Override
 		public double getDiff(int x, int y) {
 			int c = ip.get(x, y);
 			decompose(c);
@@ -136,16 +142,19 @@ public class KD_Cartoon implements PlugInFilter {
 
 		float mean;
 
+		@Override
 		public void init() {
 			mean = 0;
 			super.init();
 		}
 
+		@Override
 		public void add(int x, int y) {
 			mean += ip.getf(x, y);
 			super.add(x, y);
 		}
 
+		@Override
 		public void finish() {
 			if (count < 1)
 				return;
@@ -153,6 +162,7 @@ public class KD_Cartoon implements PlugInFilter {
 			super.finish();
 		}
 
+		@Override
 		public double getDiff(int x, int y) {
 			float c = mean - ip.getf(x, y);
 

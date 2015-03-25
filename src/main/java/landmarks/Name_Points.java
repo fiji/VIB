@@ -43,6 +43,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class Name_Points extends NamePoints implements PlugIn {
+	@Override
 	public void run( String arguments ) {
 
 		boolean promptForTemplate = IJ.altKeyDown();

@@ -44,6 +44,7 @@ public class LabelBrush_ implements PlugIn {
                     "}";
 
 
+    @Override
     public void run(String arg) {
         System.out.println("run of LabelBrush_ ...");
         if (IJ.versionLessThan("1.37c"))

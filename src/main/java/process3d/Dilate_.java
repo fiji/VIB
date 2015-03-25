@@ -27,6 +27,7 @@ public class Dilate_ implements PlugInFilter {
 	private byte[][] pixels_in;
 	private byte[][] pixels_out;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Dilate");
 		gd.addNumericField("Iso value", 255, 0);
@@ -36,6 +37,7 @@ public class Dilate_ implements PlugInFilter {
 		dilate(image, (int)gd.getNextNumber(), false).show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G | DOES_8C | NO_CHANGES;

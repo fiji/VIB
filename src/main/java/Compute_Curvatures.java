@@ -14,6 +14,7 @@ public class Compute_Curvatures implements PlugIn
 		hidden = new ComputeCurvatures();
 	}
 
+	@Override
 	public void run(String arg) {
 		hidden.runAsPlugIn(arg);
 	}

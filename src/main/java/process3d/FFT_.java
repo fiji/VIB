@@ -15,11 +15,13 @@ public class FFT_ implements PlugInFilter {
 
 	private ImagePlus image;
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 System.out.println("input data");
 		new StackConverter(image).convertToGray32();

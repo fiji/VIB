@@ -14,6 +14,7 @@ public class Resample_ extends NaiveResampler implements PlugInFilter {
 	ImagePlus image;
 	boolean verbose=false;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Parameters");
 		gd.addNumericField("Factor x", 2, 0);
@@ -44,6 +45,7 @@ public class Resample_ extends NaiveResampler implements PlugInFilter {
 		res.show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		// TODO: handle 32-bit

@@ -14,11 +14,13 @@ public class Laplace_ implements PlugInFilter {
 	private ImagePlus image;
 	float tolerance = 5.0f;
 
+	@Override
 	public int setup(String arg, ImagePlus img) {
 		this.image = img;
 		return DOES_8G | DOES_16;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		ImagePlus laplace = calculateLaplace_(image);
 		ImagePlus rebinned = Rebin_.rebin(laplace, 256);

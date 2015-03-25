@@ -33,6 +33,7 @@ public class Deformable_Registration implements PlugIn {
 
 	private int level = STARTLEVEL;
 
+	@Override
 	public void run(String arg) {
 		int[] ids = WindowManager.getIDList();
 		String[] images = new String[ids.length];

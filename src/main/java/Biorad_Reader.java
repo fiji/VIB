@@ -34,6 +34,7 @@ public class Biorad_Reader extends ImagePlus implements PlugIn {
     private String notes = "";	
     private int lutOffset = -1;
 
+    @Override
     public void run(String arg) {
 	OpenDialog od = new OpenDialog("Open Biorad...", arg);
 	directory = od.getDirectory();

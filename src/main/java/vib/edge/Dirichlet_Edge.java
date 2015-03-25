@@ -50,6 +50,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 
 	private int maxBin=255;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		ImageStack stack = image.getStack();
 
@@ -127,15 +128,19 @@ public class Dirichlet_Edge implements PlugInFilter {
 	}
 
 	static class Dirichlet2 implements MeasureWithNullModel {
+		@Override
 		public double doit(int count1,int count2) {
 			return LogFuncs.LogFactorial(count1)+LogFuncs.LogFactorial(count2);
 		}
+		@Override
 		public double doitNull(int count1,int count2) {
 			return LogFuncs.LogFactorial(count1+count2);
 		}
+		@Override
 		public double getNormalize(int totcount,int numbins) {
 			return 2.0*(LogFuncs.LogFactorial(numbins)-LogFuncs.LogFactorial(totcount/2+numbins));
 		}
+		@Override
 		public double getNormalizeNull(int totcount,int numbins) {
 			return LogFuncs.LogFactorial(numbins)-LogFuncs.LogFactorial(totcount+numbins);
 		}
@@ -143,6 +148,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 		
 
 	static class Endres implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			int denom=count1+count2;
 			if(denom==0)
@@ -158,6 +164,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 
 
 	static class Dirichlet implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			return LogFuncs.LogFactorial(count1)+LogFuncs.LogFactorial(count2)-LogFuncs.LogFactorial(count1+count2+1);
 		}
@@ -166,6 +173,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 	final static Harmonic _harmonic=new Harmonic();
 
 	static class DirichletMutualInformation implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			return -(count1+1)*_harmonic.get(count1+1,count1+count2+2)-(count2+1)*_harmonic.get(count2+1,count1+count2+2);
 		}
@@ -216,6 +224,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 	}
 
 	static class MutualInformation implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			int sum=count1+count2;
 			if(sum==0)
@@ -230,12 +239,14 @@ public class Dirichlet_Edge implements PlugInFilter {
 	}
 
 	static class Jensen implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			return count1*count2;
 		}
 	}
 
 	static class Euclidean implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			int diff=count1-count2;
 			return diff*diff;
@@ -243,6 +254,7 @@ public class Dirichlet_Edge implements PlugInFilter {
 	}
 
 	static class Dummy implements Measure {
+		@Override
 		public double doit(int count1,int count2) {
 			return count1+count2;
 		}
@@ -955,6 +967,7 @@ System.err.println("index: " + index);
 	}
 
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;

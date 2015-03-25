@@ -11,6 +11,7 @@ import util.Overlay_Registered;
 
 public class Bookstein_From_Landmarks extends BooksteinFromLandmarks
 		implements PlugIn {
+        @Override
         public void run(String arg) {
 
                 int[] wList = WindowManager.getIDList();

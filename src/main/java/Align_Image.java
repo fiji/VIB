@@ -36,6 +36,7 @@ public class Align_Image implements PlugIn {
 		return false;
 	}
 
+	@Override
 	public void run(String arg) {
 
 		// Find all images that have a LineRoi in them
@@ -203,6 +204,7 @@ public class Align_Image implements PlugIn {
 			super(ip);
 		}
 
+		@Override
 		public float get(float x, float y) {
 			int i = (int)x;
 			int j = (int)y;

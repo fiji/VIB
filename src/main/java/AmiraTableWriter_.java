@@ -11,6 +11,7 @@ import ij.text.TextWindow;
 
 public class AmiraTableWriter_ implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("Choose Window");
 		if (!AmiraParameters.addAmiraTableList(gd, "window"))

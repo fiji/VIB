@@ -37,6 +37,7 @@ public class MC_Test implements PlugIn {
 	private static final Color3f GREY = new Color3f(Color.LIGHT_GRAY);
 	private static final Color3f RED = new Color3f(1f, 0, 0);
 
+	@Override
 	public void run(String args) {
 		int defaultNo = 1;
 		final Image3DUniverse univ = new Image3DUniverse(512, 512);
@@ -54,6 +55,7 @@ public class MC_Test implements PlugIn {
 		gd.addSlider("case: ", 0, 255, defaultNo);
 		final Scrollbar slider = (Scrollbar)gd.getSliders().get(0);
 		slider.addAdjustmentListener(new AdjustmentListener() {
+			@Override
 			public void adjustmentValueChanged(AdjustmentEvent e) {
 				displayCase(univ, slider.getValue());
 			}

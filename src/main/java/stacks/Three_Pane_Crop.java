@@ -35,6 +35,7 @@ public class Three_Pane_Crop implements PlugIn {
 
 	ThreePaneCrop threePaneCrop;
 	
+	@Override
 	public void run( String argument ) {
 		
 		ImagePlus currentImage = WindowManager.getCurrentImage();

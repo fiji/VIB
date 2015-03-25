@@ -100,6 +100,7 @@ public class Two_Point_Correlation implements PlugInFilter {
 		IJ.showProgress(1.0);
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		w = image.getWidth();
 		h = image.getHeight();
@@ -174,6 +175,7 @@ public class Two_Point_Correlation implements PlugInFilter {
 		plot.draw();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		// TODO: handle 16-bit and 32-bit

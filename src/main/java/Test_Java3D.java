@@ -19,6 +19,7 @@ import javax.media.j3d.TransformGroup;
 
 public class Test_Java3D implements PlugIn {
 
+	@Override
 	public void run(String args) {
 		GenericDialog gd = new GenericDialog("3D Test");
 		Panel p = createPanel();

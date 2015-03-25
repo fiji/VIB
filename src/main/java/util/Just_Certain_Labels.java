@@ -47,6 +47,7 @@ import java.io.File;
 
 public class Just_Certain_Labels implements PlugIn {
 
+	@Override
 	public void run(String ignore) {
 	
 		String macroOptions = Macro.getOptions();

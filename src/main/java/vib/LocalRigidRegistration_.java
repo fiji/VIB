@@ -17,6 +17,7 @@ public class LocalRigidRegistration_ implements PlugInFilter{
 
 	private ImagePlus image;
 	
+	@Override
 	public void run(ImageProcessor ip) {
 		int[] wIDs = WindowManager.getIDList();
 		if(wIDs == null){
@@ -118,6 +119,7 @@ public class LocalRigidRegistration_ implements PlugInFilter{
 			
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;

@@ -15,11 +15,13 @@ public class Visual_Grep implements PlugInFilter {
 	ImagePlus imp;
 	float minDistance;
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.imp = imp;
 		return DOES_RGB | NO_CHANGES;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		int[] ids = WindowManager.getIDList();
 		String[] idList = new String[ids.length];
