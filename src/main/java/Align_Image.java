@@ -43,7 +43,7 @@ public class Align_Image implements PlugIn {
 		// Find all images that have a LineRoi in them
 		final int[] ids = WindowManager.getIDList();
 		if (null == ids) return; // no images open
-		final ArrayList all = new ArrayList();
+		final ArrayList<ImagePlus> all = new ArrayList<ImagePlus>();
 		for (int i = 0; i < ids.length; i++) {
 			final ImagePlus imp = WindowManager.getImage(ids[i]);
 			final Roi roi = imp.getRoi();
@@ -61,8 +61,8 @@ public class Align_Image implements PlugIn {
 		// create choice arrays
 		final String[] titles = new String[all.size()];
 		int k = 0;
-		for (final Iterator it = all.iterator(); it.hasNext();)
-			titles[k++] = ((ImagePlus) it.next()).getTitle();
+		for (final Iterator<ImagePlus> it = all.iterator(); it.hasNext();)
+			titles[k++] = it.next().getTitle();
 
 		final GenericDialog gd = new GenericDialog("Align Images");
 		final String current = WindowManager.getCurrentImage().getTitle();
