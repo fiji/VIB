@@ -15,6 +15,7 @@ public class EdgeDetectors_ implements PlugInFilter {
 	static double prewitt[][]={{-1,-1,-1},{0,0,0},{1,1,1}};
 	static double sobel[][]={{-1,-2,-1},{0,0,0},{1,2,1}};
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Parameters");
 		String list[]={"Roberts","Prewitt","Sobel","Isotropic"};
@@ -73,6 +74,7 @@ public class EdgeDetectors_ implements PlugInFilter {
 	}
 
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G + DOES_16 + DOES_32;

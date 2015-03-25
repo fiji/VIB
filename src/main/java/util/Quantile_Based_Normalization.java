@@ -742,6 +742,7 @@ public class Quantile_Based_Normalization implements PlugIn, ActionListener, Ite
 	}
 
 
+	@Override
 	public void run(String ignored) {
 
 		/*
@@ -870,6 +871,7 @@ public class Quantile_Based_Normalization implements PlugIn, ActionListener, Ite
 
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
 		if( source == chooseOutputDirectory ) {
@@ -907,6 +909,7 @@ public class Quantile_Based_Normalization implements PlugIn, ActionListener, Ite
 		}
 	}
 
+	@Override
 	public void itemStateChanged(ItemEvent e) {
 		Object source = e.getSource();
 		if( source == useMaskCheckbox ) {

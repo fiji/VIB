@@ -15,6 +15,7 @@ import ij.process.ImageProcessor;
 public class Triangle_Algorithm implements PlugInFilter {
 	protected ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		int[] histogram = getHistogram(ip);
 		int split = triangleAlgorithm(histogram);
@@ -22,6 +23,7 @@ public class Triangle_Algorithm implements PlugInFilter {
 		image.updateAndDraw();
 	}
 
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G | NO_CHANGES;

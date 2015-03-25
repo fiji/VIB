@@ -35,6 +35,7 @@ public class Biorad_Writer implements PlugIn {
 				"8-bit Greyscale : BYTE\n"+
 				"8-bit Colour LUT (converted to greyscale): BYTE\n";
 	
+	@Override
 	public void run(String arg) {
 		ImagePlus imp = WindowManager.getCurrentImage();
 		if (imp == null) {

@@ -10,6 +10,7 @@ import ij.plugin.PlugIn;
 import util.Overlay_Registered;
 
 public class Rigid_From_Landmarks extends RigidFromLandmarks implements PlugIn {
+	@Override
 	public void run(String arg) {
 
 		int[] wList = WindowManager.getIDList();

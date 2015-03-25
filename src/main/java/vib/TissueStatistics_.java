@@ -12,6 +12,7 @@ import vib.app.module.TissueStatistics.Statistics;
 public class TissueStatistics_ implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		AmiraTable table = calculateStatistics(image);
 		table.show();
@@ -34,6 +35,7 @@ public class TissueStatistics_ implements PlugInFilter {
 		return table;
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;

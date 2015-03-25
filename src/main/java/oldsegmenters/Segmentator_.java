@@ -136,6 +136,7 @@ public class Segmentator_ extends JFrame implements PlugIn {
 		pack();
 	}
 
+	@Override
 	public void run(String arg0) {
 		setVisible(!isVisible());
 	}
@@ -266,6 +267,7 @@ public class Segmentator_ extends JFrame implements PlugIn {
                 IJ.error("Error writing "+dir+name);
         }
 
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			//IJ.showMessage(e.getActionCommand());
 
@@ -373,6 +375,7 @@ public class Segmentator_ extends JFrame implements PlugIn {
 				cmd = command;
 			}
 
+			@Override
 			public void run() {
 				if(cmd.equals(NAIVE_LABEL)){
 					try {
@@ -446,25 +449,30 @@ public class Segmentator_ extends JFrame implements PlugIn {
 		}
 
 
+		@Override
 		public void imageOpened(ImagePlus ip) {
 			//when a new image is opened in the environement we need to listen to it gaining foces
 			ip.getWindow().addWindowFocusListener(this);
 		}
 
+		@Override
 		public void imageClosed(ImagePlus ip) {
 //			when a new image is closed we need to tidy up the listeners
 			ip.getWindow().removeWindowFocusListener(this);
 		}
 
+		@Override
 		public void imageUpdated(ImagePlus ip) {
 			//System.out.println("image Updated");
 		}
 
+		@Override
 		public void windowGainedFocus(WindowEvent e) {
 			updateCurrent(IJ.getImage());
 		}
 
 
+		@Override
 		public void windowLostFocus(WindowEvent e) {
 			//clearLabelsList(); removes labels when toolbar is highlighted
 		}
@@ -494,6 +502,7 @@ public class Segmentator_ extends JFrame implements PlugIn {
 
 		}
 
+		@Override
 		public void sliceNumberChanged(SliceEvent e) {
 			LabelThresholder_.commit(); //commit any thesholdings if any
 			//System.out.println(e.getSource().getCurrentSlice());
@@ -501,14 +510,17 @@ public class Segmentator_ extends JFrame implements PlugIn {
 			//drawLabels(currentImage, currentLabels, canvas);
 		}
 
+		@Override
 		public void roiChanged(RoiEvent e) {
 			//setLabel(currentImage);
 		}
 
+		@Override
 		public void valueChanged(ListSelectionEvent e) {
 			new SegmentatorModel(currentImage).setCurrentMaterial(getCurrentMaterial());
 		}
 
+		@Override
 		public void stateChanged(ChangeEvent e) {
 			if (e.getSource().equals(minThreshold) || e.getSource().equals(maxThreshold)) {
 				//the spinners have changed. We will try a live update

@@ -48,6 +48,7 @@ public class Average_Color implements PlugInFilter {
 		new ImagePlus("Colors", p).show();
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		Roi roi = image.getRoi();
 		if (roi == null) {
@@ -144,6 +145,7 @@ public class Average_Color implements PlugInFilter {
 					pixels[x + w * y] = v;
 	}
 
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_RGB;

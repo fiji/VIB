@@ -8,6 +8,7 @@ public class Replace_Value implements PlugInFilter {
 	
 	private ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Replace value");
 		gd.addNumericField("Pattern: [0..255] ", 0, 0);
@@ -31,6 +32,7 @@ public class Replace_Value implements PlugInFilter {
 		}
 	}
 
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G | DOES_8C;

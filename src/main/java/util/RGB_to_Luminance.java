@@ -7,6 +7,7 @@ import ij.ImagePlus;
 import ij.plugin.PlugIn;
 
 public class RGB_to_Luminance extends RGBToLuminance implements PlugIn {
+	@Override
 	public void run(String ignored) {
 
 		ImagePlus colourImage = IJ.getImage();

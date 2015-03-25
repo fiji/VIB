@@ -33,6 +33,7 @@ public class ROIBrush_ implements PlugIn {
                     " roiBrushWidth = getNumber('Roi Brush Width (pixels):', brushWidth);\n" +
                     "}";
 
+    @Override
     public void run(String arg) {
         if (IJ.versionLessThan("1.37c"))
             return;

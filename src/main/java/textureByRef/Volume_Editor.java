@@ -19,6 +19,7 @@ public class Volume_Editor implements PlugInFilter {
 		return volume;
 	}
 
+	@Override
 	public void run(ImageProcessor arg0) {
 		Image3DUniverse univ = new Image3DUniverse(512, 512);
 		Content c = univ.addVoltex(image, null, image.getTitle(),
@@ -27,6 +28,7 @@ public class Volume_Editor implements PlugInFilter {
 		univ.show();
 	}
 
+	@Override
 	public int setup(String arg0, ImagePlus arg1) {
 		this.image = arg1;
 		return DOES_8G | DOES_RGB;

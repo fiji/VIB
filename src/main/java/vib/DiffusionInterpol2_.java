@@ -17,11 +17,13 @@ import ij.process.ImageProcessor;
 
 public class DiffusionInterpol2_ extends DiffusionInterpol2
 		implements PlugInFilter {
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("DiffusionInterpol2");
 		if (!AmiraParameters.addAmiraLabelsList(gd, "TemplateLabels"))

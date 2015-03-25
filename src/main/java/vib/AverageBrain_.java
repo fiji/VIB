@@ -9,6 +9,7 @@ import vib.app.module.AverageBrain;
 public class AverageBrain_ implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Transform Parameters");
 		gd.addStringField("files", "");
@@ -23,6 +24,7 @@ public class AverageBrain_ implements PlugInFilter {
 		new AverageBrain().doit(image, fileNames, matrices);
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;

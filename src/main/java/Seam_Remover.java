@@ -31,6 +31,7 @@ public class Seam_Remover implements PlugInFilter {
 	protected int[] pixels;
 	protected ImageEnergy energy;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		String[] labels = {
 			"Remove one Horizontal Seam",
@@ -78,6 +79,7 @@ public class Seam_Remover implements PlugInFilter {
 		}
 	}
 
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_RGB;
@@ -204,14 +206,17 @@ new ImagePlus("energy", new ij.process.FloatProcessor(w, h, f, null)).show();
 			this.orig = orig;
 		}
 
+		@Override
 		public float get(int x, int y) {
 			return orig.get(y, x);
 		}
 
+		@Override
 		public ImageEnergy removeSeam(int[] seam, boolean vert) {
 			return orig.removeSeam(seam, !vert);
 		}
 
+		@Override
 		public ImageProcessor getProcessor() {
 			throw new RuntimeException("Cannot flip arbitrary "
 				+ "ImageProcessor");
@@ -235,6 +240,7 @@ new ImagePlus("energy", new ij.process.FloatProcessor(w, h, f, null)).show();
 			return r + g + b;
 		}
 
+		@Override
 		public float get(int x, int y) {
 			return (x == 0 ? 2 * getDiff(x, y, x + 1, y) :
 				(x == w - 1 ? 2 * getDiff(x - 1, y, x, y) :
@@ -244,6 +250,7 @@ new ImagePlus("energy", new ij.process.FloatProcessor(w, h, f, null)).show();
 				  getDiff(x, y - 1, x, y + 1)));
 		}
 
+		@Override
 		public ImageEnergy removeSeam(int[] seam, boolean vert) {
 			if (vert) {
 				int[] p = new int[(w - 1) * h];
@@ -270,6 +277,7 @@ new ImagePlus("energy", new ij.process.FloatProcessor(w, h, f, null)).show();
 			}
 		}
 
+		@Override
 		public ImageProcessor getProcessor() {
 			return new ColorProcessor(w, h, pixels);
 		}

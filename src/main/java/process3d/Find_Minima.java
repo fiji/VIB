@@ -12,11 +12,13 @@ public class Find_Minima extends FindMinima implements PlugInFilter {
 		super(image);
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		init(image);
 		classify().show();

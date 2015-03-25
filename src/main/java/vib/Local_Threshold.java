@@ -20,6 +20,7 @@ public class Local_Threshold implements PlugInFilter {
 	private static int lastMinThreshold = 10;
 	private static int lastMaxThreshold = 255;
 
+	@Override
 	public void run(final ImageProcessor ip) {
 		if(image.getRoi() == null) {
 			IJ.error("Selection required");
@@ -36,6 +37,7 @@ public class Local_Threshold implements PlugInFilter {
 		final Scrollbar maxSlider = (Scrollbar)gd.getSliders().get(1);
 
 		AdjustmentListener listener = new AdjustmentListener() {
+			@Override
 			public void adjustmentValueChanged(AdjustmentEvent e) {
 				applyThreshold(ip, image.getRoi(), 
 						minSlider.getValue(),
@@ -114,6 +116,7 @@ public class Local_Threshold implements PlugInFilter {
 		if(mustCleanUp) copy = null;
 	}
 
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G;

@@ -42,6 +42,7 @@ public class Find_Connected_Regions implements PlugIn {
 
 	public static final String PLUGIN_VERSION = "1.3";
 
+	@Override
 	public void run(String ignored) {
 
 		GenericDialog gd = new GenericDialog("Find Connected Regions Options (version: "+PLUGIN_VERSION+")");

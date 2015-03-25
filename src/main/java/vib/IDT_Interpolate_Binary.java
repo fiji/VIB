@@ -16,11 +16,13 @@ public class IDT_Interpolate_Binary extends BinaryInterpolator
 		implements PlugInFilter {
 	ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		ImageStack stack = image.getStack();
 		run(stack);
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;

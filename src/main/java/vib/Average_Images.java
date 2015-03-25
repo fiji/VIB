@@ -132,6 +132,7 @@ public class Average_Images implements PlugIn {
 	/* We might want to override this for using unusual openers or
 	   somethign similar. */
 
+	@Override
 	public void run(String ignored) {
 
 		GenericDialog gd = new GenericDialog("Average Images");

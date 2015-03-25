@@ -28,6 +28,7 @@ public class Flood_Fill implements PlugIn {
 		"}\n" +
 		"\n";
 	
+	@Override
 	public void run(String arg) {
 		MacroInstaller installer = new MacroInstaller();
         	installer.install(MACRO_CMD);
@@ -108,12 +109,14 @@ public class Flood_Fill implements PlugIn {
 	}
 
 	static final class DifferenceInt implements Difference {
+		@Override
 		public float getDifference(int p1, int p2) {
 			return (float)Math.abs(p2 - p1);
 		}
 	}
 
 	static final class DifferenceRGB implements Difference {
+		@Override
 		public final float getDifference(int p1, int p2) {
 			return (float)
 				Math.abs((p1&0xff0000)>>16 - (p2&0xff0000)>>16) +
@@ -123,6 +126,7 @@ public class Flood_Fill implements PlugIn {
 	}
 
 	static final class DifferenceFloat implements Difference {
+		@Override
 		public float getDifference(int p1, int p2) {
 			return Math.abs(Float.intBitsToFloat(p2) -
 				Float.intBitsToFloat(p1));

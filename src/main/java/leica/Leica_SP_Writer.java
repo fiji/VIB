@@ -23,11 +23,13 @@ public class Leica_SP_Writer implements PlugInFilter {
 	ImagePlus image;
 	int channels;
 
+	@Override
 	public int setup(String arg, ImagePlus image) {
 		this.image = image;
 		return DOES_8C | DOES_8G | NO_CHANGES;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		// get channel count
 		GenericDialog gd = new GenericDialog("Number of channels");

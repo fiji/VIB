@@ -17,6 +17,7 @@ public class Raster_Rigid implements PlugIn {
 
 	ImagePlus templ, model, warped;
 
+	@Override
 	public void run(String arg) {
 		GenericDialog gd = new GenericDialog("Raster Rigid Registration");
 		int[] wIDs = WindowManager.getIDList();

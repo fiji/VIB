@@ -20,6 +20,7 @@ import java.io.IOException;
  */
 public class Leica_SP_Reader extends LeicaSPReader implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		if (IJ.versionLessThan("1.18h"))
 			return;

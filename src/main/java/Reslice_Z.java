@@ -10,6 +10,7 @@ public class Reslice_Z implements PlugInFilter {
 
 	private ImagePlus image;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		double pd = image.getCalibration().pixelDepth;
 		GenericDialog gd = new GenericDialog("Reslice_Z");
@@ -65,6 +66,7 @@ public class Reslice_Z implements PlugInFilter {
 		return result;
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus img) {
 		this.image = img;
 		return DOES_8G | DOES_16 | DOES_32 | DOES_RGB;

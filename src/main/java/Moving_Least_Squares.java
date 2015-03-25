@@ -29,6 +29,7 @@ public class Moving_Least_Squares implements PlugIn {
 		IJ.showMessage("Need 2 images with a point roi in each,\nwith equal number of points in each roi.");
 	}
 
+	@Override
 	public void run(String arg) {
 
 		// Find all images that have a PointRoi in them
@@ -503,6 +504,7 @@ public class Moving_Least_Squares implements PlugIn {
 	}
 
 	static class Affine extends Method {
+		@Override
 		public void calculateM(float x, float y) {
 			float a11, a12, a22;
 			float b11, b12, b21, b22;
@@ -528,6 +530,7 @@ public class Moving_Least_Squares implements PlugIn {
 	}
 
 	static class Similarity extends Method {
+		@Override
 		public void calculateM(float x, float y) {
 			float mu = 0;
 			m11 = m12 = m21 = m22 = 0;
@@ -547,6 +550,7 @@ public class Moving_Least_Squares implements PlugIn {
 	}
 
 	static class Rigid extends Method {
+		@Override
 		public void calculateM(float x, float y) {
 			float mu1 = 0, mu2 = 0;
 			m11 = m12 = m21 = m22 = 0;
@@ -583,6 +587,7 @@ public class Moving_Least_Squares implements PlugIn {
 			super(ip);
 		}
 
+		@Override
 		public float get(float x, float y) {
 			int i = (int)x;
 			int j = (int)y;
@@ -604,6 +609,7 @@ public class Moving_Least_Squares implements PlugIn {
 			cp = (ColorProcessor)ip;
 		}
 
+		@Override
 		public float get(float x, float y) {
 			return (float)cp.getInterpolatedRGBPixel(x, y);
 		}

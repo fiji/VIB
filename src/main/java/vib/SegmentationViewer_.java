@@ -15,6 +15,7 @@ import java.util.Vector;
   graphic overlay to an image or stack. */
 public class SegmentationViewer_ implements PlugIn {
 
+	@Override
 	public void run(String arg) {
 		ImagePlus imp = IJ.getImage();
 

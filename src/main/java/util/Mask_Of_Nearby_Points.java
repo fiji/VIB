@@ -39,6 +39,7 @@ public class Mask_Of_Nearby_Points implements PlugIn {
 	
 	public static final String PLUGIN_VERSION = "1.1";
 
+	@Override
 	public void run(String ignored) {
 		
 		ImagePlus imagePlus = IJ.getImage();

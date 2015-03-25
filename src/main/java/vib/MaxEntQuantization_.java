@@ -10,10 +10,12 @@ import ij.process.ImageProcessor;
 
 public class MaxEntQuantization_ implements PlugInFilter {
 	ImagePlus image;
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G;
 	}
+	@Override
 	public void run(ImageProcessor ip) {
 		ImageStack stack = image.getStack();
 

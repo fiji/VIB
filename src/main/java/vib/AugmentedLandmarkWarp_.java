@@ -19,6 +19,7 @@ public class AugmentedLandmarkWarp_ implements PlugInFilter {
 	FastMatrix[] matrix;
 	Point3d[] center;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		try {
 			
@@ -148,6 +149,7 @@ public class AugmentedLandmarkWarp_ implements PlugInFilter {
 		ii.image.updateAndDraw();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C;

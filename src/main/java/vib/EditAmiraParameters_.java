@@ -24,6 +24,7 @@ public class EditAmiraParameters_ implements PlugIn, ActionListener,
 	Choice windowList;
 	TextField keyField, valueField;
 
+	@Override
 	public void run(String arg) {
 		gd = new GenericDialog("Parameters");
 		AmiraParameters.addWindowList(gd, "window", true);
@@ -69,10 +70,12 @@ public class EditAmiraParameters_ implements PlugIn, ActionListener,
 		table.getProperties().put(key, value);
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		checkForValue();
 	}
 
+	@Override
 	public void textValueChanged(TextEvent e) {
 		checkForValue();
 	}

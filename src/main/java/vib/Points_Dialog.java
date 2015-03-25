@@ -42,6 +42,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 	private PointList points;
 	private BenesNamedPoint current;
 
+	@Override
 	public void run(String arg) {
 		ImagePlus imp = IJ.getImage();
 		if(imp == null) {
@@ -153,6 +154,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 		panel.update();
 	}
 	
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
 		if(command.equals("Close")){
@@ -248,24 +250,30 @@ public class Points_Dialog extends Dialog implements ActionListener,
 		}
 	}
 	// PointListListener interface
+	@Override
 	public void added(BenesNamedPoint p) {
 		panel.update();
 	}
 
+	@Override
 	public void removed(BenesNamedPoint p) {
 		panel.update();
 	}
 
+	@Override
 	public void renamed(BenesNamedPoint p) {
 		panel.update();
 	}
 
+	@Override
 	public void moved(BenesNamedPoint p) {
 		panel.update();
 	}
 
+	@Override
 	public void highlighted(BenesNamedPoint p) {}
 
+	@Override
 	public void reordered() {
 		panel.update();
 	}
@@ -289,6 +297,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 			c.anchor = GridBagConstraints.LINE_START;			
 			final Button button = new Button(p.name);
 			button.addMouseListener(new MouseAdapter(){
+				@Override
 				public void mousePressed(MouseEvent e){
 					if(e.isPopupTrigger()){
 						current = p;
@@ -296,6 +305,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 							e.getX(),e.getY());
 					}
 				}
+				@Override
 				public void mouseReleased(MouseEvent e){
 					if(e.isPopupTrigger()){
 						current = p;
@@ -305,6 +315,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 				}
 			});
 			button.addActionListener(new ActionListener(){
+				@Override
 				public void actionPerformed(ActionEvent e){
 					mark(p);
 				}
@@ -322,6 +333,7 @@ public class Points_Dialog extends Dialog implements ActionListener,
 			c.gridx = 2;
 			Button showB = new Button("Show");
 			showB.addActionListener(new ActionListener(){
+				@Override
 				public void actionPerformed(ActionEvent e){
 					showPoint(p);
 				}

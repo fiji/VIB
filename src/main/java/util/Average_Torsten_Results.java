@@ -88,6 +88,7 @@ public class Average_Torsten_Results implements PlugIn {
 		return averager.getAverageImage(false);
 	}
 
+	@Override
 	public void run( String arg ) {
 
 		File resultsRoot = new File("/Volumes/LaCie/corpus/central-complex/biorad/reformatted");

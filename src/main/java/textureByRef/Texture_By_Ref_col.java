@@ -76,11 +76,13 @@ public class Texture_By_Ref_col implements PlugInFilter,
 		ij.IJ.runPlugIn("textureByRef.Texture_By_Ref_col", "");
 	}
 	
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.imp = imp;
 		return DOES_RGB;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		if(imp.getStackSize() > 1 ||
 				!isPow2(imp.getWidth()) ||
@@ -108,6 +110,7 @@ public class Texture_By_Ref_col implements PlugInFilter,
 	private static final int r = 5;
 	private boolean doDraw = false;
 
+	@Override
 	public void mouseDragged(MouseEvent e) {
 		if(!doDraw)
 			return;
@@ -150,6 +153,7 @@ public class Texture_By_Ref_col implements PlugInFilter,
 
 	// MouseListener interfaces
 	
+	@Override
 	public void mousePressed(MouseEvent e) {
 		int id = Toolbar.getToolId();
 		doDraw = id == Toolbar.SPARE1 || id == Toolbar.SPARE2 ||
@@ -159,22 +163,30 @@ public class Texture_By_Ref_col implements PlugInFilter,
 			id == Toolbar.SPARE9;
 	}
 
+	@Override
 	public void mouseReleased(MouseEvent e) {}
 
+	@Override
 	public void mouseEntered(MouseEvent e) {}
 
+	@Override
 	public void mouseExited(MouseEvent e) {}
 
+	@Override
 	public void mouseClicked(MouseEvent e) {}
 
+	@Override
 	public void mouseMoved(MouseEvent e) {}
 	
 	// ImageListener interfaces
 
+	@Override
 	public void imageOpened(ImagePlus image) {}
 
+	@Override
 	public void imageClosed(ImagePlus image) {}
 
+	@Override
 	public void imageUpdated(ImagePlus image) {
 		if(image != imp)
 			return;
@@ -349,6 +361,7 @@ public class Texture_By_Ref_col implements PlugInFilter,
 	}
 
 	private class ImageUpdater implements ImageComponent2D.Updater {
+		@Override
 		public void updateData(ImageComponent2D comp, int x, int y, int w, int h) {
 		}
 	}

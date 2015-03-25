@@ -11,11 +11,13 @@ import ij.process.ImageProcessor;
 public class Convolve_3d extends Convolve3d implements PlugInFilter {
 	protected ImagePlus image;
 
+	@Override
 	public int setup(String arg, ImagePlus image) {
 		this.image = image;
 		return DOES_8G | DOES_16 | DOES_32;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialogPlus gd = new GenericDialogPlus("Convolve (3D)");
 		gd.addImageChoice("kernel:", null);

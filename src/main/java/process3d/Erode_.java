@@ -27,6 +27,7 @@ public class Erode_ implements PlugInFilter {
 	private byte[][] pixels_in;
 	private byte[][] pixels_out;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		GenericDialog gd = new GenericDialog("Erode");
 		gd.addNumericField("Iso value", 255, 0);
@@ -36,6 +37,7 @@ public class Erode_ implements PlugInFilter {
 		erode(image, (int)gd.getNextNumber(), false).show();
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = imp;
 		return DOES_8G | DOES_8C | NO_CHANGES;

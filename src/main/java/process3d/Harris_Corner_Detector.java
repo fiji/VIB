@@ -23,6 +23,7 @@ public class Harris_Corner_Detector implements PlugInFilter {
 		this.image = img;
 	}
 
+	@Override
 	public void run(ImageProcessor ip) {
 		findCorners().show();
 	}
@@ -200,6 +201,7 @@ public class Harris_Corner_Detector implements PlugInFilter {
 // 		}
 // 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		this.image = new InterpolatedImage(imp).cloneImage().getImage();
 		new StackConverter(image).convertToGray32();

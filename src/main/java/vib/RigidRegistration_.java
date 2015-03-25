@@ -22,6 +22,7 @@ public class RigidRegistration_ extends RigidRegistration
 
 	GenericDialog gd;
         
+	@Override
 	public void run(ImageProcessor ip) {
 		verbose = true;
 		gd = new GenericDialog("Registration Parameters");
@@ -188,6 +189,7 @@ public class RigidRegistration_ extends RigidRegistration
 		lastResult = matrix;
 	}
 
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		image = imp;
 		return DOES_8G | DOES_8C | DOES_16 | NO_CHANGES;

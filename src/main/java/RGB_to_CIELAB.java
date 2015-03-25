@@ -10,6 +10,7 @@ public class RGB_to_CIELAB implements PlugInFilter {
 	protected ImagePlus image;
 	protected int w, h;
 
+	@Override
 	public void run(ImageProcessor ip) {
 		w = image.getWidth();
 		h = image.getHeight();
@@ -54,6 +55,7 @@ public class RGB_to_CIELAB implements PlugInFilter {
 			new ImagePlus(image.getTitle() + " RGB", ip).show();
 		}
 	}
+	@Override
 	public int setup(String args, ImagePlus imp) {
 		this.image = imp;
 		return DOES_RGB | DOES_32 | NO_CHANGES;

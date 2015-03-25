@@ -64,6 +64,7 @@ class IntensityMap implements PlugInFilter {
         private ImagePlus image;
         private String arg;
 	
+        @Override
         public int setup( String arg, ImagePlus image ) {
 		
                 this.image = image;
@@ -71,6 +72,7 @@ class IntensityMap implements PlugInFilter {
 		
         }
 	
+        @Override
         public void run(ImageProcessor ip) {
 		
                 ImageStack stack = image.getStack();
@@ -198,6 +200,7 @@ class PrincipalComponents {
         public double values[];
         public double meanXYZ[];
 	
+        @Override
         public String toString( ) {
 		
                 String result = "Means in each dimension: ( " + meanXYZ[0] +
@@ -214,6 +217,7 @@ class PrincipalComponents {
 	
         class MagnitudeComparator implements Comparator {
 		
+                @Override
                 public int compare( Object a, Object b ) {
                         double x = (Double)a;
                         double y = (Double)b;
@@ -307,6 +311,7 @@ public class PCA_Registration implements PlugIn {
                 sourceImages = null;
         }
 	
+        @Override
         public void run(String arg) {
                 chooseStacks();
                 closeSourceImages();

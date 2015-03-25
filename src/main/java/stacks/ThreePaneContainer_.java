@@ -11,6 +11,7 @@ public class ThreePaneContainer_ implements PlugIn {
 
     ThreePaneContainer threePaneContainer;
 
+	@Override
 	public void run(String foo) {
         		
 		ImagePlus currentImage = WindowManager.getCurrentImage();

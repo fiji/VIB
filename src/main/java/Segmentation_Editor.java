@@ -39,6 +39,7 @@ public class Segmentation_Editor extends vib.segment.SegmentationEditor {
 		cached = new CustomStackWindow(image);
 		cached.getLabels().show();
 		cached.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(e.getActionCommand().equals("Ok")) {
 					image.show();

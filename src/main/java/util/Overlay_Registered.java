@@ -12,6 +12,7 @@ import ij.plugin.PlugIn;
 import java.util.ArrayList;
 
 public class Overlay_Registered extends OverlayRegistered implements PlugIn {
+	@Override
 	public void run(String ignored) {
 
 		String macroOptions = Macro.getOptions();

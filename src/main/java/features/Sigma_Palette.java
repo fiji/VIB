@@ -12,6 +12,7 @@ import java.awt.Polygon;
 
 public class Sigma_Palette extends SigmaPalette implements PlugIn {
 
+	@Override
 	public void run( String ignoredArguments ) {
 
 		System.out.println("In the run() method...");
