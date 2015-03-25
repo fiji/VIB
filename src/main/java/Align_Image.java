@@ -47,8 +47,7 @@ public class Align_Image implements PlugIn {
 		for (int i = 0; i < ids.length; i++) {
 			final ImagePlus imp = WindowManager.getImage(ids[i]);
 			final Roi roi = imp.getRoi();
-			final int type = imp.getType();
-			if (null != roi && roi instanceof Line && isSupported(imp.getType())) {
+			if (roi instanceof Line && isSupported(imp.getType())) {
 				validImages.add(imp);
 			}
 		}
