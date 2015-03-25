@@ -43,14 +43,17 @@ public class Align_Image implements PlugIn {
 		// Find all images that have a LineRoi in them
 		final int[] ids = WindowManager.getIDList();
 		if (null == ids) return; // no images open
+		final ArrayList<Integer> validIDs = new ArrayList<Integer>();
 		final ArrayList<ImagePlus> validImages = new ArrayList<ImagePlus>();
 		for (int i = 0; i < ids.length; i++) {
 			final ImagePlus imp = WindowManager.getImage(ids[i]);
 			final Roi roi = imp.getRoi();
 			if (roi instanceof Line && isSupported(imp.getType())) {
+				validIDs.add(ids[i]);
 				validImages.add(imp);
 			}
 		}
+
 		if (validImages.size() < 2) {
 			IJ.showMessage("Need 2 images with a line roi in each.\n"
 				+ "Images must be 8, 16 or 32-bit.");
@@ -73,12 +76,12 @@ public class Align_Image implements PlugIn {
 		gd.showDialog();
 		if (gd.wasCanceled()) return;
 
-		final ImagePlus source =
-			WindowManager.getImage(ids[gd.getNextChoiceIndex()]);
+		final int sourceIndex = gd.getNextChoiceIndex();
+		final ImagePlus source = WindowManager.getImage(validIDs.get(sourceIndex));
 		final Line line1 = (Line) source.getRoi();
 
-		final ImagePlus target =
-			WindowManager.getImage(ids[gd.getNextChoiceIndex()]);
+		final int targetIndex = gd.getNextChoiceIndex();
+		final ImagePlus target = WindowManager.getImage(validIDs.get(targetIndex));
 		final Line line2 = (Line) target.getRoi();
 		final boolean withScaling = gd.getNextBoolean();
 		final boolean withRotation = gd.getNextBoolean();
