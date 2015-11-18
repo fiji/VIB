@@ -1,5 +1,5 @@
-import com.sun.j3d.utils.geometry.ColorCube;
-import com.sun.j3d.utils.universe.SimpleUniverse;
+import org.scijava.java3d.utils.geometry.ColorCube;
+import org.scijava.java3d.utils.universe.SimpleUniverse;
 
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
@@ -8,13 +8,13 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Panel;
 
-import javax.media.j3d.Alpha;
-import javax.media.j3d.BoundingSphere;
-import javax.media.j3d.BranchGroup;
-import javax.media.j3d.Canvas3D;
-import javax.media.j3d.RotationInterpolator;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransformGroup;
+import org.scijava.java3d.Alpha;
+import org.scijava.java3d.BoundingSphere;
+import org.scijava.java3d.BranchGroup;
+import org.scijava.java3d.Canvas3D;
+import org.scijava.java3d.RotationInterpolator;
+import org.scijava.java3d.Transform3D;
+import org.scijava.java3d.TransformGroup;
 
 
 public class Test_Java3D implements PlugIn {

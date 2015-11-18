@@ -1,6 +1,6 @@
 package textureByRef;
 
-import com.sun.j3d.utils.pickfast.PickCanvas;
+import org.scijava.java3d.utils.pickfast.PickCanvas;
 
 import ij.IJ;
 import ij.ImageListener;
@@ -25,27 +25,27 @@ import java.awt.image.DataBufferByte;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
 
-import javax.media.j3d.Appearance;
-import javax.media.j3d.BranchGroup;
-import javax.media.j3d.ColoringAttributes;
-import javax.media.j3d.GeometryArray;
-import javax.media.j3d.ImageComponent;
-import javax.media.j3d.ImageComponent2D;
-import javax.media.j3d.Material;
-import javax.media.j3d.PickInfo;
-import javax.media.j3d.PolygonAttributes;
-import javax.media.j3d.QuadArray;
-import javax.media.j3d.RenderingAttributes;
-import javax.media.j3d.Shape3D;
-import javax.media.j3d.TexCoordGeneration;
-import javax.media.j3d.Texture;
-import javax.media.j3d.Texture2D;
-import javax.media.j3d.TextureAttributes;
-import javax.media.j3d.TransparencyAttributes;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3d;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector4f;
+import org.scijava.java3d.Appearance;
+import org.scijava.java3d.BranchGroup;
+import org.scijava.java3d.ColoringAttributes;
+import org.scijava.java3d.GeometryArray;
+import org.scijava.java3d.ImageComponent;
+import org.scijava.java3d.ImageComponent2D;
+import org.scijava.java3d.Material;
+import org.scijava.java3d.PickInfo;
+import org.scijava.java3d.PolygonAttributes;
+import org.scijava.java3d.QuadArray;
+import org.scijava.java3d.RenderingAttributes;
+import org.scijava.java3d.Shape3D;
+import org.scijava.java3d.TexCoordGeneration;
+import org.scijava.java3d.Texture;
+import org.scijava.java3d.Texture2D;
+import org.scijava.java3d.TextureAttributes;
+import org.scijava.java3d.TransparencyAttributes;
+import org.scijava.vecmath.Color3f;
+import org.scijava.vecmath.Point3d;
+import org.scijava.vecmath.Point3f;
+import org.scijava.vecmath.Vector4f;
 
 public class Texture_By_Ref_col implements PlugInFilter,
 						ImageListener,
