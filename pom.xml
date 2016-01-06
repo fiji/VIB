@@ -81,5 +81,4 @@
 			<artifactId>vecmath</artifactId>
 		</dependency>
 	</dependencies>
-
 </project>
