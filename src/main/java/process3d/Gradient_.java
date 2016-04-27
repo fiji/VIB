@@ -24,6 +24,7 @@ public class Gradient_ extends Gradient implements PlugInFilter {
 
 		GenericDialog gd = new GenericDialog("Gradient_");
 		gd.addCheckbox("Use calibration", useCalibration);
+		gd.addHelp("http://imagej.net/3D_Binary_Filters");
 
 		gd.showDialog();
 		if(gd.wasCanceled()) {

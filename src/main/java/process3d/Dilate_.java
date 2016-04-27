@@ -38,6 +38,7 @@ public class Dilate_ implements PlugInFilter {
 
 		GenericDialog gd = new GenericDialog("Dilate");
 		gd.addNumericField("Iso value", isoValue, 0);
+		gd.addHelp("http://imagej.net/3D_Binary_Filters");
 
 		gd.showDialog();
 		if(gd.wasCanceled()) {

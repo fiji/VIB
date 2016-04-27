@@ -366,6 +366,7 @@ System.out.println("Propagate");
 		settingsDialog.addCheckbox("Show class indices", showIndices);
 		settingsDialog.addCheckbox("Show mean intensities", showIntensities);
 		settingsDialog.addCheckbox("Show results table", showResults);
+		settingsDialog.addHelp("http://imagej.net/3D_Binary_Filters");
 	}
 
 	private void readSettings() {

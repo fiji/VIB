@@ -40,6 +40,12 @@ public class Rebin_ extends Rebin implements PlugInFilter {
 		rebin(image, (float) min, (float) max, nBins).show();
 	}
 
+	@Override
+	public int setup(String arg, ImagePlus img) {
+		this.image = img;
+		return DOES_32;
+	}
+
 	private void saveSettings() {
 		Prefs.set(MIN_KEY, min);
 		Prefs.set(MAX_KEY, max);
@@ -66,12 +72,7 @@ public class Rebin_ extends Rebin implements PlugInFilter {
 		settingsDialog.addNumericField("min", min, 3);
 		settingsDialog.addNumericField("max", max, 3);
 		settingsDialog.addNumericField("nbins", nBins, 0);
-
+		settingsDialog.addHelp("http://imagej.net/3D_Binary_Filters");
 	}
 
-	@Override
-	public int setup(String arg, ImagePlus img) {
-		this.image = img;
-		return DOES_32;
-	}
 }

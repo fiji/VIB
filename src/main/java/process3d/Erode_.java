@@ -37,6 +37,7 @@ public class Erode_ implements PlugInFilter {
 
 		GenericDialog gd = new GenericDialog("Erode");
 		gd.addNumericField("Iso value", isoValue, 0);
+		gd.addHelp("http://imagej.net/3D_Binary_Filters");
 		
 		gd.showDialog();
 		if(gd.wasCanceled()) {
