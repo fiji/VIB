@@ -11,8 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Benjamin Schmid
- * @date 19. July 2006
+ * @author Benjamin Schmid 19. July 2006
  */
 public class Fill_holes implements PlugIn {
 	
