@@ -81,7 +81,7 @@ public class MC_Test implements PlugIn {
 		createCase(caseNo);
 		Volume volume = new Volume(image);
 		List l = MCCube.getTriangles(volume, threshold);
-		univ.addMesh(l, RED, "case" + caseNo, threshold);
+		univ.addTriangleMesh(l, RED, "case" + caseNo);
 		for(int z = 0; z < data.length; z++) {
 			for(int y = 0; y < 2; y++) {
 				for(int x = 0; x < 2; x++) {

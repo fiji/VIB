@@ -147,10 +147,6 @@ public class Delaunay_Voronoi implements PlugIn {
 				return;
 			results.reset();
 		}
-		results.setHeading(0, "x1");
-		results.setHeading(1, "y1");
-		results.setHeading(2, "x2");
-		results.setHeading(3, "y2");
 
 		TreeMap shown = new TreeMap();
 
@@ -214,10 +210,11 @@ public class Delaunay_Voronoi implements PlugIn {
 		if (shown.containsKey(pair))
 			return;
 		results.incrementCounter();
-		results.addValue(0, pair.a.coord(0));
-		results.addValue(1, pair.a.coord(1));
-		results.addValue(2, pair.b.coord(0));
-		results.addValue(3, pair.b.coord(1));
+
+		results.addValue("x1", pair.a.coord(0));
+		results.addValue("y1", pair.a.coord(1));
+		results.addValue("x2", pair.b.coord(0));
+		results.addValue("y2", pair.b.coord(1));
 		shown.put(pair, null);
 	}
 

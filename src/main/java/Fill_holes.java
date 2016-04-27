@@ -6,6 +6,7 @@ import ij.gui.ShapeRoi;
 import ij.plugin.MacroInstaller;
 import ij.plugin.PlugIn;
 
+import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -255,8 +256,9 @@ public class Fill_holes implements PlugIn {
 	
 		@Override
 		public String toString(){
-			return "[" + roi.getBoundingRect().width + "; " 
-			+ roi.getBoundingRect().height + "] (" + level + ")";
+			final Rectangle bounds = roi.getBounds();
+			return "[" + bounds.width + "; "
+			+ bounds.height + "] (" + level + ")";
 		}
 		
 		public void print(){

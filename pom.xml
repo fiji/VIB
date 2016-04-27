@@ -80,5 +80,11 @@
 			<groupId>org.scijava</groupId>
 			<artifactId>vecmath</artifactId>
 		</dependency>
+
+		<!-- SciJava dependencies -->
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+		</dependency>
 	</dependencies>
 </project>

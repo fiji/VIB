@@ -11,6 +11,7 @@
 import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.GenericDialog;
+import ij.gui.Plot;
 import ij.gui.PlotWindow;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.FloatProcessor;
@@ -169,8 +170,9 @@ public class Two_Point_Correlation implements PlugInFilter {
 			max_value /= factor;
 		}
 
-		PlotWindow plot = new PlotWindow("Two Point Correlation",
-				"radius", "S2(radius)", r, v);
+
+
+		Plot plot = new Plot("Two Point Correlation", "radius", "S2(radius)", r, v);
 		plot.setLimits(0, max_radius, min_value, max_value);
 		plot.draw();
 	}

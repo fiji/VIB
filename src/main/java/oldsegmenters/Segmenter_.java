@@ -88,7 +88,7 @@ class ChoicesDialog extends Dialog implements ActionListener {
 			setResizable(false);
 		pack();
 		GUI.center(this);
-		show();
+		setVisible(true);
 	}
 
 	@Override
