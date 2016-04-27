@@ -1,6 +1,7 @@
 package process3d;
 
 import ij.ImagePlus;
+import ij.Prefs;
 import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
@@ -10,22 +11,62 @@ import ij.process.ImageProcessor;
  * to the specified range.
  */
 public class Rebin_ extends Rebin implements PlugInFilter {
+	private static final String MIN_KEY = "VIB.Rebin.min";
+	private static final String MAX_KEY = "VIB.Rebin.max";
+	private static final String N_BINS_KEY = "VIB.Rebin.nBins";
+	private static final double DEFAULT_MIN = 0.0;
+	private static final double DEFAULT_MAX = 255.0;
+	private static final int DEFAULT_N_BINS = 256;
+
 	private ImagePlus image;
+	private GenericDialog settingsDialog;
+	private double min;
+	private double max;
+	private int nBins;
 
 	@Override
 	public void run(ImageProcessor ip) {
-		GenericDialog gd = new GenericDialog("Rebin_");
-		gd.addNumericField("min", 0.0f, 3);
-		gd.addNumericField("max", 255f, 3);
-		gd.addNumericField("nbins", 256, 0);
+		loadSettings();
+		createSettingsDialog();
 
-		gd.showDialog();
-		if(gd.wasCanceled())
+		settingsDialog.showDialog();
+		if(settingsDialog.wasCanceled()) {
 			return;
+		}
 
-		rebin(image, (float)(gd.getNextNumber()),
-				(float)(gd.getNextNumber()),
-				(int)(gd.getNextNumber())).show();
+		readSettings();
+		saveSettings();
+
+		rebin(image, (float) min, (float) max, nBins).show();
+	}
+
+	private void saveSettings() {
+		Prefs.set(MIN_KEY, min);
+		Prefs.set(MAX_KEY, max);
+		Prefs.set(N_BINS_KEY, nBins);
+	}
+
+	private void readSettings() {
+		min = settingsDialog.getNextNumber();
+		max = settingsDialog.getNextNumber();
+		nBins = (int) settingsDialog.getNextNumber();
+	}
+
+	private void loadSettings() {
+		min = Prefs.get(MIN_KEY, DEFAULT_MIN);
+		max = Prefs.get(MAX_KEY, DEFAULT_MAX);
+
+		// Can't get Prefs.getInt to work
+		String bins = Prefs.get(N_BINS_KEY, String.valueOf(DEFAULT_N_BINS));
+		nBins = Integer.parseInt(bins);
+	}
+
+	private void createSettingsDialog() {
+		settingsDialog = new GenericDialog("Rebin_");
+		settingsDialog.addNumericField("min", min, 3);
+		settingsDialog.addNumericField("max", max, 3);
+		settingsDialog.addNumericField("nbins", nBins, 0);
+
 	}
 
 	@Override

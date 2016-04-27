@@ -3,6 +3,7 @@ package process3d;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
+import ij.Prefs;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
@@ -23,7 +24,13 @@ import vib.BenesNamedPoint;
 import vib.PointList;
 
 public class IFT_ implements PlugInFilter {
-	
+	private static final String INDICES_KEY = "VIB.IFT.showIndices";
+	private static final String RESULTS_KEY = "VIB.IFT.showResults";
+	private static final String INTENSITIES_KEY = "VIB.IFT.showIntensities";
+	private static final boolean DEFAULT_SHOW_INDICES = true;
+	private static final boolean DEFAULT_SHOW_RESULTS = true;
+	private static final boolean DEFAULT_SHOW_INTENSITIES = true;
+
 	private ImagePlus image;
 	private int w, h, wh, d;
 	private PriorityQueue queue;
@@ -31,7 +38,11 @@ public class IFT_ implements PlugInFilter {
 	private int[][] result;
 	private int[] C;
 	private boolean[] flag;
-
+	private GenericDialog settingsDialog;
+	private int seed;
+	private boolean showIndices;
+	private boolean showResults;
+	private boolean showIntensities;
 
 	public IFT_(ImagePlus image) {
 		this.image = image;
@@ -52,16 +63,18 @@ public class IFT_ implements PlugInFilter {
 		}
 		titles[titles.length - 1] = "use seeds from point list";
 		titles[titles.length - 2] = "use local minima";
-		GenericDialog gd = new GenericDialog("Watershed from markers");
-		gd.addChoice("Seeds", titles, titles[0]);
-		gd.addCheckbox("Show class indices", true);
-		gd.addCheckbox("Show mean intensities", true);
-		gd.addCheckbox("Show results table", true);
-		gd.showDialog();
-		if(gd.wasCanceled())
-			return;
 
-		int seed = gd.getNextChoiceIndex();
+		loadSettings();
+		createSettingsDialog(titles);
+
+		settingsDialog.showDialog();
+		if(settingsDialog.wasCanceled()) {
+			return;
+		}
+
+		readSettings();
+		saveSettings();
+
 		if(seed == titles.length - 1)
 			initFromPointList();
 		else if(seed == titles.length - 2)
@@ -70,11 +83,11 @@ public class IFT_ implements PlugInFilter {
 			initFromImage(WindowManager.getImage(titles[seed]));
 		propagate();
 
-		if(gd.getNextBoolean())
+		if(showIndices)
 			createResult().show();
-		if(gd.getNextBoolean())
+		if(showIntensities)
 			createMeans().show();
-		if(gd.getNextBoolean())
+		if(showResults)
 			new TextWindow("Classes",
 				"min\tmax\tmean\tvol\tcogx\tcogy\tcogz\tox\toy\toz",
 				createSummaryString(), 400, 500);
@@ -341,6 +354,32 @@ System.out.println("Propagate");
 		return created.getImage();
 	}
 
+	private void loadSettings() {
+		showIndices = Prefs.get(INDICES_KEY, DEFAULT_SHOW_INDICES);
+		showIntensities = Prefs.get(INTENSITIES_KEY, DEFAULT_SHOW_INTENSITIES);
+		showResults = Prefs.get(RESULTS_KEY, DEFAULT_SHOW_RESULTS);
+	}
+
+	private void createSettingsDialog(final String[] titles) {
+		settingsDialog = new GenericDialog("Watershed from markers");
+		settingsDialog.addChoice("Seeds", titles, titles[0]);
+		settingsDialog.addCheckbox("Show class indices", showIndices);
+		settingsDialog.addCheckbox("Show mean intensities", showIntensities);
+		settingsDialog.addCheckbox("Show results table", showResults);
+	}
+
+	private void readSettings() {
+		seed = settingsDialog.getNextChoiceIndex();
+		showIndices = settingsDialog.getNextBoolean();
+		showIntensities = settingsDialog.getNextBoolean();
+		showResults = settingsDialog.getNextBoolean();
+	}
+
+	private void saveSettings() {
+		Prefs.set(INDICES_KEY, showIndices);
+		Prefs.set(INTENSITIES_KEY, showIntensities);
+		Prefs.set(RESULTS_KEY, showResults);
+	}
 
 	public static final class Cls {
 		public int min = 255;
