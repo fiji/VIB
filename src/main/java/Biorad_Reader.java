@@ -20,8 +20,8 @@ import java.util.zip.GZIPInputStream;
     Use Image/Show Info to display the header information.
 
     See statements flagged // ghj 4/3/06
-    for modifications by "Greg Joss" <gjoss@bio.mq.edu.au>
-    to open 16-bit little-endian (Intel) Biorad files from "Winnok De Vos (ir.)" <winnok.devos@ugent.be>
+    for modifications by "Greg Joss" gjoss@bio.mq.edu.au
+    to open 16-bit little-endian (Intel) Biorad files from "Winnok De Vos (ir.)" winnok.devos@ugent.be
     some if (IJ.debugMode)IJ.log(statements were also added.
 */
 

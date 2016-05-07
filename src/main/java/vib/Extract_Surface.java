@@ -1,15 +1,5 @@
 package vib;
 
-import fiji.util.DoubleArray;
-import fiji.util.IntArray;
-import ij.IJ;
-import ij.ImagePlus;
-import ij.gui.GenericDialog;
-import ij.measure.Calibration;
-import ij.plugin.filter.PlugInFilter;
-import ij.process.ImageProcessor;
-import ij3d.Image3DUniverse;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -24,11 +14,21 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
 
+import math3d.NormalEstimator;
+import math3d.Point3d;
+
+import org.scijava.util.DoubleArray;
+import org.scijava.util.IntArray;
 import org.scijava.vecmath.Color3f;
 import org.scijava.vecmath.Point3f;
 
-import math3d.NormalEstimator;
-import math3d.Point3d;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
+import ij.measure.Calibration;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
+import ij3d.Image3DUniverse;
 
 public class Extract_Surface implements PlugInFilter {
 	ImagePlus image;
@@ -290,7 +290,7 @@ public class Extract_Surface implements PlugInFilter {
 			for (i = 0; i < distances.size() &&
 					distance < distances.get(i);
 					i++);
-			distances.insert(i, distance);
+			distances.addValue(i, distance);
 			queue.add(i, voxel);
 			done.add(voxel);
 		}
@@ -662,8 +662,8 @@ public class Extract_Surface implements PlugInFilter {
 			Triangle t = (Triangle)iter.next();
 			t.addTriangleTo(mesh);
 		}
-		universe.addMesh(mesh, makeColor(color),
-				"mesh" + triangleCount++, 0);
+		universe.addTriangleMesh(mesh, makeColor(color),
+				"mesh" + triangleCount++);
 	}
 
 	Image3DUniverse universe;
@@ -717,8 +717,8 @@ public class Extract_Surface implements PlugInFilter {
 			mesh.add(p3);
 			mesh.add(p4);
 		}
-		universe.addMesh(mesh, makeColor(color),
-				"point" + pointCount++, 0);
+		universe.addTriangleMesh(mesh, makeColor(color),
+				"point" + pointCount++);
 	}
 
 	public void showSurfaceVoxels() {

@@ -16,18 +16,18 @@ import math3d.Point3d;
 
 /**
  * Generates label data for unlabelled slices based on the data in the nearest slices
- * <p/>
+ * <p>
  * Algorithm:
  * First unlabelled slices are differentiated from labelled ones via
  * almost exhastive search of all pixels
  * (implemented in StackData)
- * <p/>
+ * <p>
  * Then a list interpolations are constructed. These are a list og unlabelled slices with labelled slices either end
- * <p/>
+ * <p>
  * These interpolations are then interpolated.
  * Pixels that appear in a position in one labelled slice but not the other slice are the tricky part
  * a line is drawn from the pixel to its nearest neighbour in the other slice. All voxels that are touched by this line are colored
- * <p/>
+ * <p>
  * User: Tom Larkworthy
  * Date: 23-Jun-2006
  * Time: 19:11:01

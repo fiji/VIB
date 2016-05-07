@@ -657,7 +657,7 @@ System.err.println("index: " + index);
 		void postLudium() {
 			if(var!=null) {
 				double realMaxMutInf = getMaxVariance();
-				IJ.write("maximal MutInf: "+realMaxMutInf+", maximal variance: "+maxVarMutInf+" (std. dev.: "+Math.sqrt(maxVarMutInf)+"), ratio: "+maxMutInfRatio);
+				IJ.log("maximal MutInf: "+realMaxMutInf+", maximal variance: "+maxVarMutInf+" (std. dev.: "+Math.sqrt(maxVarMutInf)+"), ratio: "+maxMutInfRatio);
 			}
 
 			if(res3!=null)

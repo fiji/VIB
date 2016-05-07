@@ -226,6 +226,10 @@ public class Particle_Analyzer_3D implements PlugInFilter {
 	/**
 	 * Returns the part of the original picture which
 	 * belongs to the specified class
+	 *
+	 * @param classlabel id number of the class
+	 * @param label	title for the new image
+	 * @return New image of the particle(s) in the given class
 	 */
 	public ImagePlus imageForClass(int classlabel, String label){
 		ImageStack stack = new ImageStack(w,h);
@@ -247,6 +251,9 @@ public class Particle_Analyzer_3D implements PlugInFilter {
 
 	/**
 	 * Returns the size of the specified class
+	 *
+	 * @param classlabel id number of the class
+	 * @return number of elements in the class
 	 */
 	public int getSize(int classlabel){
 		for(int i=0;i<classes.length;i++){

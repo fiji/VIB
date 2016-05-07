@@ -101,13 +101,13 @@ public class FindIt_ implements PlugInFilter {
 
 		int border=2,errors=3,error;
 		if(debug)
-			IJ.write("found ("+left+","+top+")");
+			IJ.log("found ("+left+","+top+")");
 		for(right=left+minWidth,error=0;right<left+offset-2*border &&
 			((matches(right,top+border,right+bottom,top+border)
 			  && matches(right,top+2*border,right+bottom,top+2*border))
 			 || ++error<errors);right++,error=0);
 		if(debug)
-			IJ.write("found right: "+right);
+			IJ.log("found right: "+right);
 		if(right==left+minWidth)
 			return false;
 		/* for(bottom=top+minHeight+border,error=0;bottom<height &&
@@ -121,7 +121,7 @@ public class FindIt_ implements PlugInFilter {
 					error++;
 		}
 		if(debug)
-			IJ.write("found bottom: "+bottom);
+			IJ.log("found bottom: "+bottom);
 		for(top--,error=0;top>0 && error<(right-left)/2;top--) {
 			error=0;
 			for(int x=left;x<right;x++)
@@ -130,7 +130,7 @@ public class FindIt_ implements PlugInFilter {
 		}
 		top++;
 		if(debug)
-			IJ.write("found new top: "+top);
+			IJ.log("found new top: "+top);
 		return true;
 	}
 
@@ -186,7 +186,7 @@ public class FindIt_ implements PlugInFilter {
 
 		double confidence=find_offset(minOffset,maxOffset,samplingFactor);
 		if(debug)
-			IJ.write("Offset is "+offset+" ("+(confidence*100)+"%)");
+			IJ.log("Offset is "+offset+" ("+(confidence*100)+"%)");
 		if(find_rectangle(offset/2,offset/2)) {
 			ImageStack stack=new ImageStack(width,height);
 			add_slices(stack);

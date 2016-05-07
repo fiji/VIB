@@ -136,7 +136,7 @@ public class LabelBrush_ implements PlugIn {
     }
 
     public static void labelROI(Roi roi, ImageProcessor ip, int color){
-        Rectangle bounds = roi.getBoundingRect();
+        Rectangle bounds = roi.getBounds();
         for(int i=bounds.x;i<=bounds.x+bounds.width;i++){
             for(int j=bounds.y;j<=bounds.y+bounds.height;j++){
                 if(roi.contains(i,j)) ip.set(i,j,color);

@@ -3,6 +3,7 @@ package process3d;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
+import ij.Prefs;
 import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ByteProcessor;
@@ -22,6 +23,8 @@ import java.awt.image.ColorModel;
  */
 public class Dilate_ implements PlugInFilter {
 
+	private static final int DEFAULT_ISO_VALUE = 255;
+	private static final String ISO_VALUE_KEY = "VIB.Dilate.isoValue";
 	private int w, h, d;
 	private ImagePlus image;
 	private byte[][] pixels_in;
@@ -29,12 +32,23 @@ public class Dilate_ implements PlugInFilter {
 
 	@Override
 	public void run(ImageProcessor ip) {
+		// Can't get Prefs.getInt to work
+		String iso = Prefs.get(ISO_VALUE_KEY, String.valueOf(DEFAULT_ISO_VALUE));
+		int isoValue = Integer.parseInt(iso);
+
 		GenericDialog gd = new GenericDialog("Dilate");
-		gd.addNumericField("Iso value", 255, 0);
+		gd.addNumericField("Iso value", isoValue, 0);
+		gd.addHelp("http://imagej.net/3D_Binary_Filters");
+
 		gd.showDialog();
-		if(gd.wasCanceled())
+		if(gd.wasCanceled()) {
 			return;
-		dilate(image, (int)gd.getNextNumber(), false).show();
+		}
+
+		isoValue = (int) gd.getNextNumber();
+		Prefs.set(ISO_VALUE_KEY, isoValue);
+
+		dilate(image, isoValue, false).show();
 	}
 
 	@Override

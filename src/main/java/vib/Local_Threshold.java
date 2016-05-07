@@ -93,7 +93,7 @@ public class Local_Threshold implements PlugInFilter {
 
 		int w = ip.getWidth(), h = ip.getHeight();
 
-		Rectangle bounds = roi.getBoundingRect();
+		Rectangle bounds = roi.getBounds();
 		int x1 = bounds.x > 0 ? bounds.x : 0;
 		int y1 = bounds.y > 0 ? bounds.y : 0;
 		int x2 = x1 + bounds.width <= w ? x1 + bounds.width : w;

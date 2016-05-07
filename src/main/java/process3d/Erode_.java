@@ -1,14 +1,15 @@
 package process3d;
 
+import java.awt.image.ColorModel;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
+import ij.Prefs;
 import ij.gui.GenericDialog;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
-
-import java.awt.image.ColorModel;
 
 /**
  * This class implements the erosion filter.
@@ -21,7 +22,8 @@ import java.awt.image.ColorModel;
  * hood and not a 27-neighborhood.
  */
 public class Erode_ implements PlugInFilter {
-
+	private static final int DEFAULT_ISO_VALUE = 255;
+	private static final String ISO_VALUE_KEY = "VIB.Erode.isoValue";
 	private int w, h, d;
 	private ImagePlus image;
 	private byte[][] pixels_in;
@@ -29,12 +31,23 @@ public class Erode_ implements PlugInFilter {
 
 	@Override
 	public void run(ImageProcessor ip) {
+		// Can't get Prefs.getInt to work
+		String iso = Prefs.get(ISO_VALUE_KEY, String.valueOf(DEFAULT_ISO_VALUE));
+		int isoValue = Integer.parseInt(iso);
+
 		GenericDialog gd = new GenericDialog("Erode");
-		gd.addNumericField("Iso value", 255, 0);
+		gd.addNumericField("Iso value", isoValue, 0);
+		gd.addHelp("http://imagej.net/3D_Binary_Filters");
+		
 		gd.showDialog();
-		if(gd.wasCanceled())
+		if(gd.wasCanceled()) {
 			return;
-		erode(image, (int)gd.getNextNumber(), false).show();
+		}
+
+		isoValue = (int) gd.getNextNumber();
+		Prefs.set(ISO_VALUE_KEY, isoValue);
+		
+		erode(image, isoValue, false).show();
 	}
 
 	@Override

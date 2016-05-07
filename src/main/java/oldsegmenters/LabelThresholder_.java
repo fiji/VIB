@@ -68,7 +68,7 @@ public class LabelThresholder_ implements PlugInFilter{
     public static void threshold(Roi roi, int min, int max, ImageProcessor imageData, ImageProcessor labelData, int label) {
         mem = new Mem(labelData);
 
-        Rectangle bounds = roi.getBoundingRect();
+        Rectangle bounds = roi.getBounds();
         for (int x = bounds.x; x <= bounds.x + bounds.width; x++) {
             for (int y = bounds.y; y <= bounds.y + bounds.height; y++) {
                 if (roi.contains(x,y) && imageData.get(x, y) >= min && imageData.get(x, y) <= max) {
