@@ -15,6 +15,55 @@
 	<name>plugins/VIB_.jar</name>
 	<description />
 
+	<developers>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<url>http://imagej.net/User:Rueden</url>
+			<roles>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Mark Longair</name>
+			<url>http://imagej.net/User:Mark</url>
+			<roles><role>founder</role></roles>
+			<properties><id>mhl</id></properties>
+		</contributor>
+		<contributor>
+			<name>Johannes Schindelin</name>
+			<url>http://imagej.net/User:Schindelin</url>
+			<roles><role>founder</role></roles>
+			<properties><id>dscho</id></properties>
+		</contributor>
+		<contributor>
+			<name>Benjamin Schmid</name>
+			<url>http://imagej.net/User:Bene</url>
+			<roles><role>founder</role></roles>
+			<properties><id>bene51</id></properties>
+		</contributor>
+		<contributor>
+			<name>Richard Domander</name>
+			<url>http://imagej.net/User:Rdom</url>
+			<properties><id>rimadoma</id></properties>
+		</contributor>
+		<contributor>
+			<name>Mark Hiner</name>
+			<url>http://imagej.net/User:Hinerm</url>
+			<properties><id>hinerm</id></properties>
+		</contributor>
+		<contributor>
+			<name>Kota Miura</name>
+			<url>http://imagej.net/User:Miura</url>
+			<properties><id>cmci</id></properties>
+		</contributor>
+		<contributor>
+			<name>Michel Teussink</name>
+		</contributor>
+	</contributors>
+
 	<scm>
 		<connection>scm:git:git://github.com/fiji/VIB</connection>
 		<developerConnection>scm:git:git@github.com:fiji/VIB</developerConnection>
