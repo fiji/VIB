@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>26.0.0</version>
+		<version>27.0.1</version>
 		<relativePath />
 	</parent>
 
@@ -101,7 +101,8 @@
 	</ciManagement>
 
 	<properties>
-		<package-name>vib</package-name>
+		<automatic-module-name>sc.fiji.VIB</automatic-module-name>
+
 		<license.licenseName>gpl_v3</license.licenseName>
 		<license.copyrightOwners>Fiji developers.</license.copyrightOwners>
 
