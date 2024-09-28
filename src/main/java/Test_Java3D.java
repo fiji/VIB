@@ -19,8 +19,6 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
-import org.scijava.java3d.utils.geometry.ColorCube;
-import org.scijava.java3d.utils.universe.SimpleUniverse;
 
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
@@ -29,14 +27,15 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Panel;
 
-import org.scijava.java3d.Alpha;
-import org.scijava.java3d.BoundingSphere;
-import org.scijava.java3d.BranchGroup;
-import org.scijava.java3d.Canvas3D;
-import org.scijava.java3d.RotationInterpolator;
-import org.scijava.java3d.Transform3D;
-import org.scijava.java3d.TransformGroup;
-
+import org.jogamp.java3d.Alpha;
+import org.jogamp.java3d.BoundingSphere;
+import org.jogamp.java3d.BranchGroup;
+import org.jogamp.java3d.Canvas3D;
+import org.jogamp.java3d.RotationInterpolator;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TransformGroup;
+import org.jogamp.java3d.utils.geometry.ColorCube;
+import org.jogamp.java3d.utils.universe.SimpleUniverse;
 
 public class Test_Java3D implements PlugIn {
 

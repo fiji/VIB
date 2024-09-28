@@ -19,7 +19,6 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  * #L%
  */
-import org.scijava.java3d.utils.geometry.Sphere;
 
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -35,17 +34,18 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.util.List;
 
-import org.scijava.java3d.Appearance;
-import org.scijava.java3d.BranchGroup;
-import org.scijava.java3d.ColoringAttributes;
-import org.scijava.java3d.PolygonAttributes;
-import org.scijava.java3d.QuadArray;
-import org.scijava.java3d.Shape3D;
-import org.scijava.java3d.Transform3D;
-import org.scijava.java3d.TransformGroup;
-import org.scijava.vecmath.Color3f;
-import org.scijava.vecmath.Point3f;
-import org.scijava.vecmath.Vector3f;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.BranchGroup;
+import org.jogamp.java3d.ColoringAttributes;
+import org.jogamp.java3d.PolygonAttributes;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.java3d.Shape3D;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TransformGroup;
+import org.jogamp.java3d.utils.geometry.Sphere;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector3f;
 
 import marchingcubes.MCCube;
 
@@ -55,7 +55,7 @@ public class MC_Test implements PlugIn {
 	private ImagePlus image;
 	private byte[][] data;
 
-	private static final Color3f GREY = new Color3f(Color.LIGHT_GRAY);
+	private static final Color3f GREY = new Color3f(0.753f, 0.753f, 0.753f);
 	private static final Color3f RED = new Color3f(1f, 0, 0);
 
 	@Override

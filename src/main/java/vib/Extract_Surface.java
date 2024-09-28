@@ -38,10 +38,10 @@ import java.util.Vector;
 import math3d.NormalEstimator;
 import math3d.Point3d;
 
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3f;
 import org.scijava.util.DoubleArray;
 import org.scijava.util.IntArray;
-import org.scijava.vecmath.Color3f;
-import org.scijava.vecmath.Point3f;
 
 import ij.IJ;
 import ij.ImagePlus;

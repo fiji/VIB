@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>33.2.0</version>
+		<version>38.0.1</version>
 		<relativePath />
 	</parent>
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>VIB_</artifactId>
-	<version>3.0.5-SNAPSHOT</version>
+	<version>4.0.0-SNAPSHOT</version>
 
 	<name>VIB</name>
 	<description>VIB plugin for Fiji.</description>
@@ -108,6 +108,8 @@
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
 		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
+
+		<_3D_Viewer.version>5.0.0</_3D_Viewer.version>
 	</properties>
 
 	<repositories>
@@ -144,15 +146,15 @@
 
 		<!-- Java 3D dependencies -->
 		<dependency>
-			<groupId>org.scijava</groupId>
-			<artifactId>j3dcore</artifactId>
+			<groupId>org.jogamp.java3d</groupId>
+			<artifactId>java3d-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.scijava</groupId>
-			<artifactId>j3dutils</artifactId>
+			<groupId>org.jogamp.java3d</groupId>
+			<artifactId>java3d-utils</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.scijava</groupId>
+			<groupId>org.jogamp.java3d</groupId>
 			<artifactId>vecmath</artifactId>
 		</dependency>
 

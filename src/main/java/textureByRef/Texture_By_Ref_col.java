@@ -21,8 +21,6 @@
  */
 package textureByRef;
 
-import org.scijava.java3d.utils.pickfast.PickCanvas;
-
 import ij.IJ;
 import ij.ImageListener;
 import ij.ImagePlus;
@@ -46,27 +44,28 @@ import java.awt.image.DataBufferByte;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
 
-import org.scijava.java3d.Appearance;
-import org.scijava.java3d.BranchGroup;
-import org.scijava.java3d.ColoringAttributes;
-import org.scijava.java3d.GeometryArray;
-import org.scijava.java3d.ImageComponent;
-import org.scijava.java3d.ImageComponent2D;
-import org.scijava.java3d.Material;
-import org.scijava.java3d.PickInfo;
-import org.scijava.java3d.PolygonAttributes;
-import org.scijava.java3d.QuadArray;
-import org.scijava.java3d.RenderingAttributes;
-import org.scijava.java3d.Shape3D;
-import org.scijava.java3d.TexCoordGeneration;
-import org.scijava.java3d.Texture;
-import org.scijava.java3d.Texture2D;
-import org.scijava.java3d.TextureAttributes;
-import org.scijava.java3d.TransparencyAttributes;
-import org.scijava.vecmath.Color3f;
-import org.scijava.vecmath.Point3d;
-import org.scijava.vecmath.Point3f;
-import org.scijava.vecmath.Vector4f;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.BranchGroup;
+import org.jogamp.java3d.ColoringAttributes;
+import org.jogamp.java3d.GeometryArray;
+import org.jogamp.java3d.ImageComponent;
+import org.jogamp.java3d.ImageComponent2D;
+import org.jogamp.java3d.Material;
+import org.jogamp.java3d.PickInfo;
+import org.jogamp.java3d.PolygonAttributes;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.java3d.RenderingAttributes;
+import org.jogamp.java3d.Shape3D;
+import org.jogamp.java3d.TexCoordGeneration;
+import org.jogamp.java3d.Texture;
+import org.jogamp.java3d.Texture2D;
+import org.jogamp.java3d.TextureAttributes;
+import org.jogamp.java3d.TransparencyAttributes;
+import org.jogamp.java3d.utils.pickfast.PickCanvas;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3d;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector4f;
 
 public class Texture_By_Ref_col implements PlugInFilter,
 						ImageListener,
